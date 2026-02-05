@@ -113,7 +113,12 @@ const SiteHeader = () => {
           </nav>
           
           <div className="hidden lg:block">
-            <Button variant="hero" size="lg" className="hover-scale whitespace-nowrap">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="hover-scale whitespace-nowrap"
+              onClick={() => window.open(`${process.env.NEXT_PUBLIC_PRAKTIKA_BOOKING_URL}?Apikey=${process.env.NEXT_PUBLIC_PRAKTIKA_API_KEY}`, '_blank')}
+            >
               Book Appointment
             </Button>
           </div>
@@ -174,7 +179,10 @@ const SiteHeader = () => {
                     variant="hero" 
                     size="lg" 
                     className="w-full"
-                    onClick={closeMobileMenu}
+                    onClick={() => {
+                      window.open(`${process.env.NEXT_PUBLIC_PRAKTIKA_BOOKING_URL}?Apikey=${process.env.NEXT_PUBLIC_PRAKTIKA_API_KEY}`, '_blank');
+                      closeMobileMenu();
+                    }}
                   >
                     Book Appointment
                   </Button>

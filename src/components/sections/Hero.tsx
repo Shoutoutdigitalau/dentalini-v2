@@ -104,7 +104,12 @@ const Hero = () => {
                       </p>
                     )}
                     <div className="flex justify-center lg:justify-start">
-                      <Button variant="hero" size="lg" className="w-full sm:w-auto max-w-xs">
+                      <Button 
+                        variant="hero" 
+                        size="lg" 
+                        className="w-full sm:w-auto max-w-xs"
+                        onClick={() => window.open(`${process.env.NEXT_PUBLIC_PRAKTIKA_BOOKING_URL}?Apikey=${process.env.NEXT_PUBLIC_PRAKTIKA_API_KEY}`, '_blank')}
+                      >
                         {slide.buttonText}
                       </Button>
                     </div>
