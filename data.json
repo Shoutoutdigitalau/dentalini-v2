@@ -1,0 +1,1750 @@
+[
+    {
+        "id": 4,
+        "documentId": "xfw1cs30vhnofbtt4gd0vjlt",
+        "Title": "Dental Hygiene",
+        "Slug": "dental-hygiene",
+        "description": "Professional cleaning is a preventive procedure that should be done at least every six months or more frequently for some at-risk individuals.",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Professional cleaning is a preventive procedure that should be done at least every six months or more frequently for some at-risk individuals. Regular cleaning keeps your teeth free from calculus (tartar) and prevents many problems before they begin.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "We believe in preventative care to save your natural teeth, however if your tooth is infected or dead we can still provide you with a range of options to resolve the problem.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Your preventative dental health appointment can include:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "A review of your medical history",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Comprehensive assessment of your gum health",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Oral cancer screening evaluation of your bite",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Chewing and swallowing patterns",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Jaw Joint (TMJ) assessment",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Identification of any cause of bad breath (if appropriate)",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Thorough cleaning and polishing of your teeth",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Assessment of existing dental restorations",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Evaluation of possible cosmetic enhancements of your smile",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Application of decay preventing agents",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Individualised oral hygiene instruction including instruction in tooth brushing and flossing, counselling in proper nutrition and recommendations for future treatment",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Referral to specialists for specific treatment (as needed)",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Once we stabilise the health of your teeth and gums, you may need to visit the dentist every three, six or twelve months for routine recalls. At each visit we monitor your customised oral hygiene program with a view to preventing problems rather than treating them many years later.",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-09-18T05:27:05.550Z",
+        "updatedAt": "2025-09-18T05:27:05.550Z",
+        "publishedAt": "2025-09-18T05:27:05.600Z",
+        "Image_url": {
+            "id": 5,
+            "documentId": "g6expfla7ep4sb884z958hto",
+            "name": "DSC_1007.JPG",
+            "alternativeText": null,
+            "caption": null,
+            "width": 4106,
+            "height": 2628,
+            "formats": {
+                "large": {
+                    "ext": ".JPG",
+                    "url": "/uploads/large_DSC_1007_7d626dc932.JPG",
+                    "hash": "large_DSC_1007_7d626dc932",
+                    "mime": "image/jpeg",
+                    "name": "large_DSC_1007.JPG",
+                    "path": null,
+                    "size": 64.8,
+                    "width": 1000,
+                    "height": 640,
+                    "sizeInBytes": 64800
+                },
+                "small": {
+                    "ext": ".JPG",
+                    "url": "/uploads/small_DSC_1007_7d626dc932.JPG",
+                    "hash": "small_DSC_1007_7d626dc932",
+                    "mime": "image/jpeg",
+                    "name": "small_DSC_1007.JPG",
+                    "path": null,
+                    "size": 23.26,
+                    "width": 500,
+                    "height": 320,
+                    "sizeInBytes": 23262
+                },
+                "medium": {
+                    "ext": ".JPG",
+                    "url": "/uploads/medium_DSC_1007_7d626dc932.JPG",
+                    "hash": "medium_DSC_1007_7d626dc932",
+                    "mime": "image/jpeg",
+                    "name": "medium_DSC_1007.JPG",
+                    "path": null,
+                    "size": 41.87,
+                    "width": 750,
+                    "height": 480,
+                    "sizeInBytes": 41867
+                },
+                "thumbnail": {
+                    "ext": ".JPG",
+                    "url": "/uploads/thumbnail_DSC_1007_7d626dc932.JPG",
+                    "hash": "thumbnail_DSC_1007_7d626dc932",
+                    "mime": "image/jpeg",
+                    "name": "thumbnail_DSC_1007.JPG",
+                    "path": null,
+                    "size": 8.28,
+                    "width": 244,
+                    "height": 156,
+                    "sizeInBytes": 8275
+                }
+            },
+            "hash": "DSC_1007_7d626dc932",
+            "ext": ".JPG",
+            "mime": "image/jpeg",
+            "size": 686.39,
+            "url": "/uploads/DSC_1007_7d626dc932.JPG",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2025-09-18T05:25:36.906Z",
+            "updatedAt": "2025-09-18T05:25:36.906Z",
+            "publishedAt": "2025-09-18T05:25:36.906Z"
+        }
+    },
+    {
+        "id": 16,
+        "documentId": "uixqppe7bdw7lhv5vy5maqda",
+        "Title": "Cosmetic Dentistry",
+        "Slug": "cosmetic-dentistry",
+        "description": "Don't hide the real you any longer! Get that bright, white, straight smile that you have been after… Today!",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Don't hide the real you any longer! Get that bright, white, straight smile that you have been after… Today!",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "A beautiful smile is your greatest asset. It can depict your personality as well as how you feel about yourself. A slight imperfection with your smile can drastically affect the way you see yourself and hinder you from looking and feeling your best.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "When searching for a Cosmetic Dentist in Milsons Point, your criteria should be based on more than just proximity. Cosmetic Dentistry is the ultimate blend of art and dental science, and Dentalini is considered to be one of the best cosmetic dental surgeries in Milsons Point, with state of the art equipment and computerised imaging systems.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "At Dentalini, the services provided are comprehensive and the treatment plans will be specifically designed for you. We understand the importance of being able to smile with confidence, so our tailored treatments will ensure you can achieve this state of oral health – for the rest of your life.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Our range of dental services include:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Complete cosmetic dental makeovers",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Crowns and bridges",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Veneers",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Gaps in teeth",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Tooth whitening",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Bonding",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "At your initial consultation we would like to learn about your concerns and your previous dental history so that we can advise you on how best to help you keep your teeth for life.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "At Dentalini, we focus on patient education so that you will be thoroughly aware of treatment required and how best to maintain your oral health.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Remember – our Dentists and staff are available if you require further information.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "We use cosmetic dental porcelain veneers. These are micro-thin layers of extremely durable porcelain custom-made in our dental lab and then permanently fused to the tooth's enamel. This very conservative approach allows us to reshape teeth, close spaces, and ensure you end up with the brightest smile.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Or if you want a huge boost to your self-confidence we can give you a full smile makeover. Properly cared for, the results can last 10 to 15 years.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "We do cosmetic teeth whitening using the latest Philips Zoom in-surgery whitening and take-home kits. The take-home kits offer an excellent, relatively low-cost solution to boost your self-confidence and make your smile fresh and new. At Dentalini, we can advise you on the best way to whiten your teeth.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "You trust your dentist to give the right advice and all the options and help you make the right decisions about how best to maintain your teeth and gums. The decisions you and your dentist make now can affect your appearance and dental health (even your general health) for decades. We offer finest cosmetic and teeth whitening technologies available.",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-09-18T05:35:47.484Z",
+        "updatedAt": "2025-10-09T05:11:36.536Z",
+        "publishedAt": "2025-10-09T05:11:36.556Z",
+        "Image_url": {
+            "id": 1,
+            "documentId": "r7t0rcroixpo6g5z7p4flzz7",
+            "name": "thumbnail_shutterstock_70216339.jpg",
+            "alternativeText": null,
+            "caption": null,
+            "width": 1920,
+            "height": 1280,
+            "formats": {
+                "large": {
+                    "ext": ".jpg",
+                    "url": "/uploads/large_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "large_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "large_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 87.12,
+                    "width": 1000,
+                    "height": 667,
+                    "sizeInBytes": 87119
+                },
+                "small": {
+                    "ext": ".jpg",
+                    "url": "/uploads/small_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "small_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "small_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 30.11,
+                    "width": 500,
+                    "height": 333,
+                    "sizeInBytes": 30112
+                },
+                "medium": {
+                    "ext": ".jpg",
+                    "url": "/uploads/medium_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "medium_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "medium_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 56.38,
+                    "width": 750,
+                    "height": 500,
+                    "sizeInBytes": 56376
+                },
+                "thumbnail": {
+                    "ext": ".jpg",
+                    "url": "/uploads/thumbnail_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "thumbnail_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "thumbnail_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 9.47,
+                    "width": 234,
+                    "height": 156,
+                    "sizeInBytes": 9470
+                }
+            },
+            "hash": "thumbnail_shutterstock_70216339_4e189babd2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "size": 255.23,
+            "url": "/uploads/thumbnail_shutterstock_70216339_4e189babd2.jpg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2025-09-03T10:51:37.002Z",
+            "updatedAt": "2025-09-03T10:51:37.002Z",
+            "publishedAt": "2025-09-03T10:51:37.005Z"
+        }
+    },
+    {
+        "id": 8,
+        "documentId": "etgujhf6aqwbznqqeza4q9uf",
+        "Title": "Teeth Whitening Treatment",
+        "Slug": "teeth-whitening-treatment",
+        "description": "Teeth whitening can lighten and brighten your smile in a flash…\nYour smile is the biggest single contributor to your facial appearance. It's the first thing we ",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Teeth whitening can lighten and brighten your smile in a flash…",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Your smile is the biggest single contributor to your facial appearance. It's the first thing we notice when we meet someone so we want our smile to be as good as it can be. Teeth Whitening treatment will give your smile a new lease on life, and is the quickest, most effective way to enhance the appearance of your smile. Teeth Whitening treatment can reverse discolouration due to the effects of aging and those caused by caffeine, soft drinks, red wine, tea, coffee and tobacco as well as your dietary and social habits. Dentalini uses the latest Zoom whitening technology, helping you achieve a whiter and brighter, natural smile in just 1 visit!",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "At Dentalini's Milsons Point Dental office we offer cosmetic teeth whitening in-surgery whitening. This one-hour procedure is fast and convenient. It's also long-lasting and proven to be safe and effective. The zoom whitening systems are sold only to dentists, unlike other whitening systems in the market, due to its high efficacy & potency. This also ensures that the system is being delivered by a person qualified to make such changes to your teeth – your Dentist.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "The benefits of the Philips Zoom teeth whitening instead of the UV treatment are:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "More comfortable treatment process",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Reduced sensitivity",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Immediate results in about 1 hour",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Cool blue LED light versus the UV light making it more comfortable",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Relief ACP provided to reduce sensitivity and rehydrate the teeth",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "In just one hour, the treatment can safely whiten teeth upto 8 shades lighter. The in-chair Zoom whitening system involves using a specially formulated whitening agent in combination with blue spectrum of white light to produce fast, dazzling results.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Benefits of teeth whitening:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Your teeth can be lightened by several shades",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Improves your smile confidence",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Can be performed at your convenience",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Makes you appear healthy and radiant!",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Changes your image among your peers",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "If you would be more comfortable whitening your teeth at your own pace and in the privacy of your own home, we also provide take-home kits that are custom fitted and cater for sensitive teeth. The take-home kits offer an excellent, relatively low-cost solution to boost your self-confidence and make your smile fresh and new.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Tray whitening - Tray whitening is administered in a custom-made tray. This tray is made from an impression of the patient’s mouth. After the mould is ready, the patient is then presented with whitening gel so the tray can be worn during the day or night – until you reach the desired results.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Can’t wait for your brilliant smile? ",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Download the Zoom app and preview your whiter healthier smile today!",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-09-18T05:42:45.301Z",
+        "updatedAt": "2025-09-18T05:42:45.301Z",
+        "publishedAt": "2025-09-18T05:42:45.351Z",
+        "Image_url": {
+            "id": 7,
+            "documentId": "h1a2pemy3zgxzsetr9z8pltc",
+            "name": "Picture2.png",
+            "alternativeText": null,
+            "caption": null,
+            "width": 280,
+            "height": 268,
+            "formats": {
+                "thumbnail": {
+                    "ext": ".png",
+                    "url": "/uploads/thumbnail_Picture2_d927bed57c.png",
+                    "hash": "thumbnail_Picture2_d927bed57c",
+                    "mime": "image/png",
+                    "name": "thumbnail_Picture2.png",
+                    "path": null,
+                    "size": 59.65,
+                    "width": 163,
+                    "height": 156,
+                    "sizeInBytes": 59651
+                }
+            },
+            "hash": "Picture2_d927bed57c",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 49.17,
+            "url": "/uploads/Picture2_d927bed57c.png",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2025-09-18T05:41:48.259Z",
+            "updatedAt": "2025-09-18T05:41:48.259Z",
+            "publishedAt": "2025-09-18T05:41:48.260Z"
+        }
+    },
+    {
+        "id": 10,
+        "documentId": "rbok2m05p6jt3xcejzx3cdp2",
+        "Title": "Porcelain Veneers",
+        "Slug": "porcelain-veneers",
+        "description": "The Art and Science of Porcelain Veneers\nPlacing porcelain veneers is an art and a particularly demanding art – a dentist must be an artist to do them well. Porcelain veneers are recommended for patients who want to change the shape/ colour of their teeth, mild position changes, close a diastema (wide gap between teeth) without using metal braces and for those who want a smile make over.",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "The Art and Science of Porcelain Veneers",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Placing porcelain veneers is an art and a particularly demanding art – a dentist must be an artist to do them well. Porcelain veneers are recommended for patients who want to change the shape/ colour of their teeth, mild position changes, close a diastema (wide gap between teeth) without using metal braces and for those who want a smile make over.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Porcelain veneers are thin wafers of porcelain, about half a millimetre thick (the thickness of a fingernail) that are bonded onto the front of teeth to create a smile makeover. They are permanent, custom-shaped and require the removal of roughly 0.5 mm of the original tooth to allow space for the new veneer. Porcelain mimics tooth structure better than any other restorative material. It is harder than enamel, so it resists wear, doesn’t discolour, can last for many years and resists stains more effectively than tooth enamel.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Benefits of porcelain veneers include:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Improve the appearance of your smile",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Whiten discoloured and stained teeth",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Cover cracks, chips and serrations",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Close gaps in the teeth",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Restore the shape of crooked teeth",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": " ",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "For your Smile Make-Over, we do Digital Smile Designing to recreate your smile to the way you want it!",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "The veneers are custom made by our dental lab to match your needs before being permanently fused to the tooth enamel. Our very skilled dentists can manipulate the colour and translucency to re-create the look of any tooth. Done well, they create a beautiful result.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "A full smile makeover can make a significant contribution to self-confidence – for both men and women.",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-09-18T05:45:33.233Z",
+        "updatedAt": "2025-09-18T05:45:33.233Z",
+        "publishedAt": "2025-09-18T05:45:33.262Z",
+        "Image_url": {
+            "id": 1,
+            "documentId": "r7t0rcroixpo6g5z7p4flzz7",
+            "name": "thumbnail_shutterstock_70216339.jpg",
+            "alternativeText": null,
+            "caption": null,
+            "width": 1920,
+            "height": 1280,
+            "formats": {
+                "large": {
+                    "ext": ".jpg",
+                    "url": "/uploads/large_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "large_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "large_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 87.12,
+                    "width": 1000,
+                    "height": 667,
+                    "sizeInBytes": 87119
+                },
+                "small": {
+                    "ext": ".jpg",
+                    "url": "/uploads/small_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "small_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "small_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 30.11,
+                    "width": 500,
+                    "height": 333,
+                    "sizeInBytes": 30112
+                },
+                "medium": {
+                    "ext": ".jpg",
+                    "url": "/uploads/medium_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "medium_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "medium_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 56.38,
+                    "width": 750,
+                    "height": 500,
+                    "sizeInBytes": 56376
+                },
+                "thumbnail": {
+                    "ext": ".jpg",
+                    "url": "/uploads/thumbnail_thumbnail_shutterstock_70216339_4e189babd2.jpg",
+                    "hash": "thumbnail_thumbnail_shutterstock_70216339_4e189babd2",
+                    "mime": "image/jpeg",
+                    "name": "thumbnail_thumbnail_shutterstock_70216339.jpg",
+                    "path": null,
+                    "size": 9.47,
+                    "width": 234,
+                    "height": 156,
+                    "sizeInBytes": 9470
+                }
+            },
+            "hash": "thumbnail_shutterstock_70216339_4e189babd2",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "size": 255.23,
+            "url": "/uploads/thumbnail_shutterstock_70216339_4e189babd2.jpg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2025-09-03T10:51:37.002Z",
+            "updatedAt": "2025-09-03T10:51:37.002Z",
+            "publishedAt": "2025-09-03T10:51:37.005Z"
+        }
+    },
+    {
+        "id": 12,
+        "documentId": "cds1bjnmoljec0amw9g7xnvl",
+        "Title": "Dentures",
+        "Slug": "dentures",
+        "description": "Are you afraid to smile, after losing your teeth? Dentures can restore your upper or lower dental arch with a full row of teeth to make you smile!",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Are you afraid to smile, after losing your teeth? Dentures can restore your upper or lower dental arch with a full row of teeth to make you smile!",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Dentures are a prosthetic device made from acrylic or metal to replace a missing tooth/teeth in the upper or lower arch.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Dentures can restore your smile so you can feel confident smiling and eating your favourite foods once more. With modern science and improved technology, dental implants are the best replacement option for missing teeth. But dentures can be a short or longer term replacement option when health, existing bone in jaw and economic reasons is a stumbling block.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Benefits of dentures include:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "format": "unordered",
+                "children": [
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Facial aesthetics are improved",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Muscles in the face are supported Mastication – chewing ability is improved",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Improved speech",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list-item",
+                        "children": [
+                            {
+                                "text": "Improved self-esteem",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Complete",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "A complete denture is fitted to replace all of the natural teeth in the upper and/or lower dental arch.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Partial",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "A partial denture is designed to fill the vacancies in your smile, and is supported by metal clasps that are attached to your remaining teeth.",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-10-09T05:09:25.241Z",
+        "updatedAt": "2025-10-09T05:09:25.241Z",
+        "publishedAt": "2025-10-09T05:09:25.289Z",
+        "Image_url": null
+    },
+    {
+        "id": 14,
+        "documentId": "c7d9b9f90aemrb3j4u93zdk9",
+        "Title": "Extractions",
+        "Slug": "extractions",
+        "description": "Sometimes if a tooth is beyond repair from advanced stages of decay or gum disease, we may recommend extraction.",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Sometimes if a tooth is beyond repair from advanced stages of decay or gum disease, we may recommend extraction.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Tooth extraction is sometimes unavoidable. A tooth may need to be extracted if broken or if it is damaged by decay or if the tooth has become very loose due to gum & bone disease (periodontitis). If possible, we will try to fix it with a filling, RCT, a crown or some other treatment. Sometimes the tooth cannot be saved and must be removed.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Simple extractions",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Extractions are performed under a local anaesthetic, utilising special dental tools and instruments to remove the tooth from its socket. Our caring dentist’s will do everything they can to ensure our patients experience very little discomfort throughout the procedure. We at Dentalini believe in pain-free dentistry! Not only is local anaesthetic used, we also have happy gas (nitrous oxide), can prescribe medication to reduce anxiety if required, or put you to sleep (twilight sedation) for the procedure. Don’t forget to ask you dentist about your options!",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Surgical extractions",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "If your problem tooth is in a difficult position, our Dentists may recommend a surgical extraction. In a surgical extraction a small incision (cut) is placed in the gums and sometimes a little bone is also removed. Sutures/ stitches are placed after removing the tooth. In some cases (esp in regards to wisdom teeth) a referral to an oral surgeon may be given.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Here are some common reasons for extracting a tooth:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Extra teeth may be blocking other teeth from erupting",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Serial extraction – done to assist with eruption & alignment of teeth, it also helps with orthodontic (braces) treatment.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Fitting of braces may require teeth extraction to create room in the mouth",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Severely decayed teeth which cannot be saved.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Grossly broken teeth.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Periodontal (gum) disease leading to very tooth/ teeth.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Radiation treatment to the head and neck may require the removal of teeth in the field of radiation",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Cancer drugs may result in infected teeth. These drugs weaken the immune system and increase the risk of infection. Infected teeth may need to be extracted",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Organ transplant patients may need some teeth extracted if the teeth could become sources of infection. Organ transplant recipients have a high risk of infection because they must take drugs to decrease or suppress the immune system",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Wisdom teeth (also called third molars) are often extracted either before or after they erupt. This usually happens in late teens or early 20s",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Impacted wisdom teeth are teeth that are stuck in the jaw and can't erupt properly. They must be removed if they are decayed or cause pain",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Some wisdom teeth are blocked by other teeth or there may be no room for them to erupt. This can irritate the gum, causing pain and swelling",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "If the removal is likely to result in an unsightly gap your dentist may discuss the options of replacing the missing tooth with an implant, a bridge or a removable denture to restore your original smile.",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-10-09T05:10:51.543Z",
+        "updatedAt": "2025-10-09T05:10:51.543Z",
+        "publishedAt": "2025-10-09T05:10:51.564Z",
+        "Image_url": null
+    },
+    {
+        "id": 18,
+        "documentId": "yt3b7wp65j4h011jtwdqo9it",
+        "Title": "Fillings",
+        "Slug": "fillings",
+        "description": "We provide patients with white composite fillings to restore the smile.\n\nAdvancements in modern dental materials and techniques mean we can repair cavities safely and effectively. No longer do we need to provide outdated amalgam fillings that darken the smile and pose as a health risk. We can provide you with several choices when it comes to selecting materials to repair your missing, worn, damaged or decayed teeth.",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "We provide patients with white composite fillings to restore the smile.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Advancements in modern dental materials and techniques mean we can repair cavities safely and effectively. No longer do we need to provide outdated amalgam fillings that darken the smile and pose as a health risk. We can provide you with several choices when it comes to selecting materials to repair your missing, worn, damaged or decayed teeth.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Tooth coloured fillings can be matched to your exact tooth colour and are proven to be durable and long-lasting. Strong ceramic materials or composite resins are used to fill cavities and go unnoticeable as fillings. Not only are they durable, they are aesthetically pleasing for your entire smile.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Tooth-coloured fillings are normally carried out under local anaesthetic. The affected area is cleared of decay or loose filling and the tooth is washed and dried. The white filling is inserted and smoothed off before a bright light is applied to set it. The filling is then trimmed off and polished.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Benefits of tooth coloured fillings include:",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Matched to the tooth’s natural shade",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Only requires one visit to the dentist",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Less of the natural tooth needs to be removed",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Easily fixed to the tooth’s surface and hardened with a special light",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "· Applied in thin layers that leave the filling strong",
+                        "type": "text"
+                    }
+                ]
+            }
+        ],
+        "createdAt": "2025-10-09T05:15:12.609Z",
+        "updatedAt": "2025-10-09T05:15:12.609Z",
+        "publishedAt": "2025-10-09T05:15:12.626Z",
+        "Image_url": null
+    },
+    {
+        "id": 20,
+        "documentId": "lbgolazssfkorabf5jllfyr3",
+        "Title": "Mouth Guard",
+        "Slug": "mouth-guard",
+        "description": "We provide mouthguards to improve your sports performance and protect your teeth\n\nNot only are sports mouth guards crucial for protecting your teeth during fast-paced activity, they can also improve your overall balance during movement.",
+        "Content": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "We provide mouthguards to improve your sports performance and protect your teeth",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Not only are sports mouth guards crucial for protecting your teeth during fast-paced activity, they can also improve your overall balance during movement.",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "text": "Custom-made designs",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "children": "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects."
+            },
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+            "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects."
+        ],
+        "createdAt": "2025-10-09T05:16:22.800Z",
+        "updatedAt": "2025-10-09T05:16:22.800Z",
+        "publishedAt": "2025-10-09T05:16:22.818Z",
+        "Image_url": null
+    }
+]

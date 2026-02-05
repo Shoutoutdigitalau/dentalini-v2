@@ -1,0 +1,1543 @@
+{
+  "services": [
+    {
+      "id": 6,
+      "Title": "Dental Hygiene",
+      "Slug": "dental-hygiene",
+      "description": "Professional dental cleanings, scale and polish, and preventive care to maintain healthy teeth and gums.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Professional cleaning** is a preventive procedure that should be done at least every six months or more frequently for some at-risk individuals. Regular cleaning keeps your teeth free from calculus (tartar) and prevents many problems before they begin."
+            }
+          ]
+        },
+
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We believe in preventative care to save your natural teeth, however if your tooth is infected or dead we can still provide you with a range of options to resolve the problem."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Your preventative dental health appointment can include:**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• A review of your medical history\n• Comprehensive assessment of your gum health\n• Oral cancer screening\n• Evaluation of your bite\n• Chewing and swallowing patterns\n• Jaw Joint (TMJ) assessment\n• Identification of any cause of bad breath (if appropriate)\n• Thorough cleaning and polishing of your teeth\n• Assessment of existing dental restorations\n• Evaluation of possible cosmetic enhancements of your smile\n• Application of decay preventing agents\n• Individualised oral hygiene instruction including instruction in tooth brushing and flossing, counselling in proper nutrition and recommendations for future treatment\n• Referral to specialists for specific treatment (as needed)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Once we stabilise the health of your teeth and gums, you may need to visit the dentist every three, six or twelve months for routine recalls. At each visit we monitor your customised oral hygiene program with a view to preventing problems rather than treating them many years later.",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "Title": "Dental Implants",
+      "Slug": "dental-implants",
+      "description": "Missing teeth? Let's fix that! Dental implants are a permanent solution that look and feel like natural teeth! Whether you've lost a tooth/teeth due to injury, decay, or age, implants can restore your smile and confidence!",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Missing teeth? Let's fix that!**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dental implants are a permanent solution that look and feel like natural teeth! Whether you’ve lost a tooth/teeth due to injury, decay, or age, implants can restore your smile and confidence!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "An implant is a screw made of Titanium. This screw is very inert (ie – it doesn’t interact with our body tissues) and safe. The implant is inserted into the jaw bone at the site of a missing tooth. After adequate healing, usually 3-6months, a tooth/ crown is placed on it. The crown looks & feels like your natural tooth."
+            }
+          ]
+        },
+       
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The colour and shape of the crown is matched to your own. Hence, no one will notice an artificial tooth. After completion of treatment, you are able to eat all of your regular dietary foods without restrictions."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Why struggle with uncomfortable dentures which moves and gathers food or be worried about unsightly gaps between your teeth? Come in for a consult to see if you are eligible for an implant."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "Title": "Teeth Whitening",
+      "Slug": "teeth-whitening",
+      "description": "Professional teeth whitening treatments for a brighter, more confident smile using Philips Zoom technology.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Teeth whitening can lighten and brighten your smile in a flash…"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Your smile is the  **biggest single contributor**  to your facial appearance. It's the first thing we notice when we meet someone so we want our smile to be as good as it can be. **Teeth Whitening** treatment will give your smile a new lease on life, and is the **quickest, most effective way** to enhance the appearance of your smile. **Teeth Whitening** treatment can reverse discolouration due to the effects of aging and those caused by caffeine, soft drinks, red wine, tea, coffee and tobacco as well as your dietary and social habits. **Dentalini uses the latest Zoom whitening technology**, helping you achieve a whiter and brighter, natural smile in just 1 visit!"
+            }
+          ]
+        },
+       
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "At Dentalini's **Milsons Point** Dental office we offer cosmetic teeth whitening in-surgery whitening. This **one-hour** procedure is **fast and convenient**. It's also **long-lasting** and proven to be safe and effective. The zoom whitening systems are sold only to dentists, unlike other whitening systems in the market, due to its high efficacy & potency. This also ensures that the system is being delivered by a person qualified to make such changes to your teeth – your Dentist."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**The benefits of the Philips Zoom teeth whitening instead of the UV treatment are:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• More **comfortable** treatment process\n• **Reduced** sensitivity\n• **Immediate results** in about 1 hour\n• Cool blue LED light versus the UV light making it more comfortable\n• Relief ACP provided to reduce sensitivity and rehydrate the teeth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In just one hour, the treatment can safely whiten teeth **upto 8 shades lighter**. The in-chair Zoom whitening system involves using a specially formulated whitening agent in combination with blue spectrum of white light to produce fast, dazzling results."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Benefits of teeth whitening:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Your teeth can be lightened by several shades\n• Improves your smile confidence\n• Can be performed at your convenience\n• Makes you appear healthy and radiant!\n• Changes your image among your peers"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If you would be more comfortable whitening your teeth at your own pace and in the privacy of your own home, we also provide take-home kits that are custom fitted and cater for sensitive teeth. The take-home kits offer an **excellent, relatively low-cost** solution to boost your self-confidence and make your smile fresh and new."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Tray whitening** - Tray whitening is administered in a custom-made tray. This tray is made from an impression of the patient’s mouth. After the mould is ready, the patient is then presented with whitening gel so the tray can be worn during the day or night – until you reach the desired results."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Can’t wait for your brilliant smile?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Download the Zoom app and preview your whiter healthier smile today!"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 4,
+      "Title": "Orthodontics",
+      "Slug": "orthodontics",
+      "description": "Crooked teeth are a common dental problem. Orthodontics is the diagnosis, prevention and treatment of mis-aligned teeth and facial irregularities (malocclusion) and is frequently performed to improve a person’s appearance by straightening the teeth. Orthodontics is a highly specialised branch of Cosmetic Dentistry treatment. Over time Orthodontic treatment will reposition your upper and lower jaw allocation and amend bone growth within the mouth. Orthodontic treatment involves the design and use of corrective appliances such as braces, plates and aligners., whilst improving your oral health.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Crooked teeth** are a common dental problem. **Orthodontics** is the **diagnosis, prevention and treatment** of **mis-aligned teeth and facial irregularities (malocclusion)** and is frequently performed to **improve a person’s appearance** by straightening the teeth. **Orthodontics** is a **highly specialised branch of Cosmetic Dentistry** treatment. Over time Orthodontic treatment will reposition your upper and lower jaw allocation and amend bone growth within the mouth. Orthodontic treatment involves the design and use of **corrective appliances such as braces, plates and aligners**., whilst improving your oral health."
+            }
+          ]
+        },
+     
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Teeth can be moved at **any ages**, as long as the **gum and bone are healthy**. Because the basic process involved in moving teeth is the same in adults as in children, orthodontic treatment can usually be **successful at any age**. However, because **adult’s facial bones are no longer growing**, some severe malocclusions cannot be corrected with braces alone. In these cases, **orthodontic treatment is combined with jaw surgery** and can achieve **dramatic improvements**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Orthodontics for children is critically important**. Early management of tooth alignment ensures children don’t have too many problems when their **permanent teeth erupt**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Braces treatment**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The **most common orthodontic treatment is braces**, which need to be worn for a certain period of time to shift teeth into correct alignment. Braces are comprised of **metal brackets and wires**, and to make the experience a bit more appealing, there are many colours to choose from, even **clear braces**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Treatment time**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Treatment generally takes between **18- 24 months** and requires **regular visits to the Orthodontist**. Some patients will complete treatment sooner than others, it just depends on the desired results and **severity of the original malocclusion**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**After Braces**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "On completion of braces treatment, the braces are removed and a **retainer appliance** is fitted to **stabilise the new position of the teeth**. These appliances can include plates, moulds, or wires permanently fitted behind the teeth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Visits to your orthodontist will still be necessary to **monitor your progress** after your treatment."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Interventions include the following:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• **Correcting simple irregularities** in one or more teeth.\n• **Space maintenance** to ensure no valuable space is lost for adult teeth when baby teeth are lost early.\n• **Interceptive Orthodontics** – helps growing children develop properly with enough space for permanent teeth. Treatment here can often **prevent the need for future orthodontic procedures**. This is called **Orthopaedics** and is a new concept in helping dental bones develop into the **proper relationship**."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "Title": "Crown & Bridge",
+      "Slug": "crown-bridge",
+      "description": "Do you have cracked, damaged or missing teeth? Crowns and bridges can help you.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Do you have **cracked, damaged or missing teeth? Crowns and bridges** can help you."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Sometimes we can't repair a tooth. A crown is needed when your tooth has been **extensively filled, RC treated** or it is **cracked or broken**, or when there is **not enough tooth structure left** for a traditional filling or an inlay or onlay."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Crowns and bridges are cosmetic techniques to restore the appearance of your teeth** even where the original tooth or teeth are **badly damaged** – or **even missing.**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Clients of Dentalini are directly involved in the **design process** when improving their smile with **porcelain crowns**, thus ensuring **total satisfaction with the end result**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Crowns**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A crown is a **strong porcelain/ zirconia/ gold sleeve (cap)** that fits perfectly over any remaining tooth structure, and ensure **function and stability**. They are generally made from **zirconia, porcelain or gold alloys and strengthen and protect your teeth** from further breakdown. Crowns normally takes **2-3 appointments** to fit, and are **tremendously effective** in restoring the **appearance of your smile** and **full function** for the tooth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Bridges**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Where a tooth is **missing, a replacement tooth** can be attached to **two crowns** which are then **cemented (glued)** to the adjacent teeth. Because the open space is bridged together this is called a **Bridge**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Bridges are **a strong and stable alternative to dentures**, and are an **ideal way to replace a missing tooth** and to **restore full function and aesthetics**. A bridge can also be used to **replace multiple missing teeth**. To construct a dental bridge, we take an **impression of your teeth** and send it to our **laboratory** and they are **precision crafted** by a **qualified dental technician**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Benefits of Crowns and Bridges:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Durable and resilient\n• Prevent teeth from shifting\n• Improve your ability to chew and speak\n• Maintain facial structure\n• Restore smile confidence"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Crowns and Bridges** may be used in **conjunction with each other** to **restore your smile.**"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 8,
+      "Title": "Root Canal Treatment",
+      "Slug": "root-canal-treatment",
+      "description": "We like to see your teeth in optimum health at all times, however in the case of infection we can treat the tooth to restore function.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We like to see your teeth in optimum health at all times, however in the case of infection we can treat the tooth to restore function."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Root Canal Treatment (RCT)** is necessary when the **nerve & blood tissues of a tooth (or pulp)** becomes **diseased or infected** causing **discomfort, pain and/ or abscess formation**. In such cases the **tissues and nerve of the tooth must be removed**. Teeth can become infected if you have **poor oral hygiene**, or as a result of **deep cavity caused by decay. Endodontic treatment (root canal treatment)** is a **sequence of treatments** that aims to **clean out the infected tooth pulp** (to prevent the the infection from continuing downwards out of the root, to the bone) and to **fill it with an inert material**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In this case, you will need to visit your dentist **promptly** to receive **root canal treatment** to have any chance of **saving your natural tooth**. This will **prevent any further corrosion** to your tooth and nerve. **X-rays** would be taken at your dental consultation and some **tests may be done** to conclude if **Root Canal Treatment is necessary**. After which point, a **series of appointments** would be assigned to you for your treatment."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Signs you may require root canal treatment:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Tooth sensitivity to hot and cold foods or beverages\n• Constant throbbing tooth pain\n• Pain when biting and chewing\n• Abscess/ Pus surrounding the tooth or in the gums underneath a tooth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "After filling, a **crown is fabricated** to **complete the rescue and restoration of the natural tooth.**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The procedure is generally spread over several visits to ensure the **infected pulp and associated bacteria** have been **adequately drained.**"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "Title": "TMJ Disorder Treatment",
+      "Slug": "tmj-disorder",
+      "description": "Treatment for jaw pain, headaches, and temporomandibular joint disorders affecting jaw function.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Do you experience severe headaches, jaw or neck pain on a regular basis?"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Temporomandibular Joint Disorder (TMJ) syndrome is an umbrella term covering acute or chronic inflammation of the temporomandibular joint, which connects the mandible to the skull. Misalignment of the jaw, facial and cranial structure can cause TMJ Disorders resulting in tension in all areas of the cranium, neck, shoulders and spine. If the jaw is not properly aligned, it can trigger severe headaches, tinnitus, pressure behind the eyes and vertigo (dizziness). Patients who grind their teeth during their sleep will feel further pain and discomfort. Symptoms often involve more than one of the numerous TMJ components: muscles, nerves, tendons, ligaments, bones, connective tissue, and the teeth. Ear pain associated with the swelling of proximal tissue can also be a symptom."
+            }
+          ]
+        },
+
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Typically, symptoms of TMJ syndrome include:**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Pain or tenderness in the jaw\n• Aching pain in the ear\n• Difficulty chewing or discomfort while chewing\n• Aching facial pain\n• Locking of the joint, making it difficult to open or close the mouth\n• Headache and/or migraines\n• Uncomfortable bite\n• An uneven bite, because one or more teeth are making premature contact\n• Dizziness"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "TMJ disorders can also cause a clicking sound or grating sensation when you open your mouth or chew. If there's no pain or limitation of movement associated with your jaw clicking you probably don't have a TMJ disorder."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If you have any of these symptoms contact Dentalini to make a time for a consultation. We will recommend what type of treatment is needed for your particular problem. Treatment may involve a series of steps and often only minor, relatively non-invasive treatment may be needed. If found to be of major concern, you may be referred to a specialist."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Causes**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Malocclusions can start with a child’s first breath and swallow. Facial bones are shaped by tongue action and the force of breath through nasal passages. Any disturbance to these habits can result in an aberrant growth pattern. Allergies, lack of or incorrect breastfeeding, large tonsils or adenoids and poor nutrition are the fundamental causes. Thumb sucking, mouth breathing, tongue thrust and lip suck habits will continue to reinforce this problem."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Stress can also be a key contributor in the development of TMJ. The external influence of anxiety results in clenched jaws and tight shoulders. By clenching your jaw you may be compressing jaw joints. In which case the back jaw ligament will stretch and become inflamed. Your jaw disc may also become dislocated; resulting in a popping sound when you open your mouth widely (whilst talking, eating or yawning)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Treatment options**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Facial orthopaedic treatment primarily works by altering the muscle position of the jaw. Treatment can combine muscle stimulant treatment and orthodontic treatment to restore the imbalance of the jaw and correct  erroneous chewing habits."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Benefits of facial orthopaedics include:**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Restores proper breathing\n• Restores sleeping patterns\n• Freedom from headaches\n• Incorrect habits corrected and maintained\n• Improved speech\n• Symmetrical facial features\n• Improved smile"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In some cases the disc at the jaw joint may have to be repositioned or replaced by surgery. Such extreme measures are usually rare and handled by an oral surgeon."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 4,
+      "Title": "Cosmetic Dentistry",
+      "Slug": "cosmetic-dentistry",
+      "description": "Don't hide the real you any longer! Get that bright, white, straight smile that you have been after… Today!",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Don't hide the real you any longer! Get that bright, white, straight smile that you have been after… Today!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A beautiful smile is your greatest asset. It can depict your personality as well as how you feel about yourself. A slight imperfection with your smile can drastically affect the way you see yourself and hinder you from looking and feeling your best."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "When searching for a Cosmetic Dentist in Milsons Point, your criteria should be based on more than just proximity. Cosmetic Dentistry is the ultimate blend of art and dental science, and Dentalini is considered to be one of the best cosmetic dental surgeries in Milsons Point, with state of the art equipment and computerised imaging systems."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "At Dentalini, the services provided are comprehensive and the treatment plans will be specifically designed for you. We understand the importance of being able to smile with confidence, so our tailored treatments will ensure you can achieve this state of oral health – for the rest of your life."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Our range of dental services include:**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Complete cosmetic dental makeovers\n• Crowns and bridges\n• Veneers\n• Gaps in teeth\n• Tooth whitening\n• Bonding"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "At your initial consultation we would like to learn about your concerns and your previous dental history so that we can advise you on how best to help you keep your teeth for life."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "At Dentalini, we focus on patient education so that you will be thoroughly aware of treatment required and how best to maintain your oral health."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Remember – our Dentists and staff are available if you require further information."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We use cosmetic dental porcelain veneers. These are micro-thin layers of extremely durable porcelain custom-made in our dental lab and then permanently fused to the tooth's enamel. This very conservative approach allows us to reshape teeth, close spaces, and ensure you end up with the brightest smile."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Or if you want a huge boost to your self-confidence we can give you a full smile makeover. Properly cared for, the results can last 10 to 15 years."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We do cosmetic teeth whitening using the latest Philips Zoom in-surgery whitening and take-home kits. The take-home kits offer an excellent, relatively low-cost solution to boost your self-confidence and make your smile fresh and new. At Dentalini, we can advise you on the best way to whiten your teeth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "You trust your dentist to give the right advice and all the options and help you make the right decisions about how best to maintain your teeth and gums. The decisions you and your dentist make now can affect your appearance and dental health (even your general health) for decades. We offer finest cosmetic and teeth whitening technologies available."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 9,
+      "Title": "Porcelain Veneers",
+      "Slug": "porcelain-veneers",
+      "description": "The Art and Science of Porcelain Veneers. Placing porcelain veneers is an art and a particularly demanding art – a dentist must be an artist to do them well.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The Art and Science of **Porcelain Veneers**."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Placing **porcelain veneers** is an art and a particularly demanding art – a dentist must be an artist to do them well. **Porcelain veneers** are recommended for patients who want to change the shape/ colour of their teeth, mild position changes, close a diastema (wide gap between teeth) without using metal braces and for those who want a smile make over."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Porcelain veneers** are thin wafers of porcelain, about half a millimetre thick (the thickness of a fingernail) that are bonded onto the front of teeth to create a smile makeover. They are permanent, custom-shaped and require the removal of roughly 0.5 mm of the original tooth to allow space for the new veneer. Porcelain mimics tooth structure better than any other restorative material. It is harder than enamel, so it resists wear, doesn’t discolour, can last for many years and resists stains more effectively than tooth enamel."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Benefits of porcelain veneers include:**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Improve the appearance of your smile\n• Whiten discoloured and stained teeth\n• Cover cracks, chips and serrations\n• Close gaps in the teeth\n• Restore the shape of crooked teeth\n"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "For your Smile Make-Over, we do Digital Smile Designing to recreate your smile to the way you want it!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The veneers are custom made by our dental lab to match your needs before being permanently fused to the tooth enamel. Our very skilled dentists can manipulate the colour and translucency to re-create the look of any tooth. Done well, they create a beautiful result."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A full smile makeover can make a significant contribution to self-confidence – for both men and women."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "Title": "Night Guards & Splints",
+      "Slug": "night-guards-splints",
+      "description": "Do you suffer from aching teeth and jaws in your waking hours? This could be due unconscious teeth grinding during your sleep…",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Do you suffer from aching teeth and jaws in your waking hours? This could be due unconscious teeth grinding during your sleep…"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Teeth grinding and clenching, also known as **Bruxism**, generally occurs during sleep and can often go undetected. Bruxism is generally caused by psychological stress, anxiety and tension in your everyday life. Bruxism causes chips in the teeth, wear of the biting surface and cracks in the teeth. This wears down tooth enamel, removes the sharp biting surfaces and flattens the edges of the teeth. Sometimes there is a tendency to grind the molars together, often a partner or family member is first to notice the sufferers  condition due to this noise associated with this grinding throughout the night. Bruxism is one of the world’s most common sleep disorders. Over a period of time, tooth damage will occur and may also cause tooth loss. If enough enamel has been worn, the softer dentine will be exposed. This also leaves you at greater risk of tooth decay and also tooth fracture and in some people, gum recession. Early intervention is advisable."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Symptoms of teeth clenching and grinding can include:**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Aching jaws and teeth, during waking hours (highest on waking up in the morning)\n• Trouble chewing on food\n• Tension headaches and stress in the temple region\n• Jaw joint (temporomandibular joint) pain\n• Severely worn teeth\n• Broken or chipped teeth\n• Fractured teeth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Treatment**",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Treatment may involve wearing an occlusal splint over night to prevent the teeth in the upper and lower arches from making contact. Alternatively neuromuscular treatment may be required to relax and retrain jaw muscles to rest and function as normal. Using Botulinum Toxin to relax the jaw muscles is also one of the treatment modalities."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "An Occlusal Splint (also called a bite splint, bite plane, or night guard) is a removable dental appliances carefully molded to fit the upper or lower arches of teeth worn at night to reduce the amount of grinding pressure transferred to the teeth. It offers relief for the muscles of the jaw and protection of the teeth from wear and breakage. Occlusal Splints are straightforward to make: impression paste is used to make models of your teeth, and our technician builds the splint based on information about your bite that your dentist will provide."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Occlusal Splints may take a little getting used to, but most people find that within a few nights they are completely comfortable wearing their Splint. It is best not to eat or drink with a Splint in place, but most people find that having a conversation with it on is possible."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 12,
+      "Title": "Dentures",
+      "Slug": "dentures",
+      "description": "Are you afraid to smile, after losing your teeth? Dentures can restore your upper or lower dental arch with a full row of teeth to make you smile! This is a treatment option when dental implants can’t be done due to medical/ dental/ economic reasons. ",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Are you afraid to smile, after losing your teeth? Dentures can restore your upper or lower dental arch with a full row of teeth to make you smile! This is a treatment option when dental implants can’t be done due to medical/ dental/ economic reasons. "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dentures are a prosthetic device made from acrylic to replace a missing tooth/teeth in the upper or lower arch."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dentures can restore your smile so you can feel confident smiling and eating your favourite foods once more."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Benefits of dentures include:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Facial aesthetics are improved\n• Muscles in the face are supported Mastication – chewing ability is improved\n• Improved speech\n• Improved self-esteem\n• Dentures can be installed as complete or partial dentures to improve the aesthetics of your smile"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Complete**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A complete denture is fitted to replace all of the natural teeth in the upper and/or lower dental arch."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Partial**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A partial denture is designed to fill the vacancies in your smile, and is supported by metal clasps that are attached to your remaining teeth."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 13,
+      "Title": "Tooth Extractions",
+      "Slug": "tooth-extractions",
+      "description": "Sometimes if a tooth is beyond repair due to advanced decay, damage, or gum disease, extraction may be recommended to protect your oral health and prevent further complications.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Sometimes if a tooth is beyond repair from advanced stages of decay, we may recommend extraction."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tooth extraction is sometimes unavoidable. A tooth may need to be extracted if it is broken, severely decayed, or has become very loose due to gum and bone disease (periodontitis). If possible, we always try to save the tooth with a filling, root canal treatment (RCT), a crown, or other restorative options. However, in some cases the tooth cannot be saved and must be removed."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Simple Extractions**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Simple extractions are performed under a local anaesthetic using specialised dental tools to gently remove the tooth from its socket. Our caring dentists do everything possible to ensure patients experience minimal discomfort throughout the procedure. At Dentalini, we strongly believe in pain-free dentistry."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Surgical Extractions**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If a problem tooth is positioned deep within the jaw or is difficult to remove, a surgical extraction may be recommended. This procedure involves making a small incision in the gums and, in some cases, removing a small amount of bone. Sutures (stitches) are placed after the tooth is removed. For complex cases, especially involving wisdom teeth, a referral to an oral surgeon may be advised."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Common reasons for tooth extraction include:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Extra teeth blocking the eruption of other teeth\n• Serial extraction to assist with eruption and alignment of teeth and support orthodontic (braces) treatment\n• Creating space in the mouth for braces\n• Severely decayed teeth that cannot be saved\n• Grossly broken teeth\n• Advanced periodontal (gum) disease causing very loose teeth\n• Teeth that must be removed before radiation treatment to the head and neck\n• Infected teeth caused by cancer medications that weaken the immune system\n• Teeth removed prior to organ transplantation to reduce infection risk\n• Wisdom teeth (third molars) commonly removed in the late teens or early twenties\n• Impacted wisdom teeth that cannot erupt properly and cause pain or decay\n• Wisdom teeth with insufficient space causing gum irritation, pain, or swelling"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If tooth removal results in an unsightly gap, your dentist may discuss replacement options such as dental implants, bridges, or removable dentures to restore function and maintain your natural smile."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+
+    {
+      "id": 14,
+      "Title": "Tooth Coloured Fillings",
+      "Slug": "tooth-coloured-fillings",
+      "description": "White composite and ceramic fillings restore damaged or decayed teeth while maintaining a natural, aesthetically pleasing smile using modern dental materials and techniques.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We provide patients with white composite fillings or colour-matched ceramic or porcelain fillings to restore the smile."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Advancements in modern dental materials and techniques allow cavities to be repaired safely and effectively. Outdated amalgam fillings, which can darken the smile and pose potential health concerns, are no longer necessary. Today, patients have multiple material options to repair missing, worn, damaged, or decayed teeth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Tooth-coloured fillings are carefully matched to your natural tooth shade and are proven to be strong, durable, and long-lasting. High-quality ceramic materials or composite resins are used to fill cavities seamlessly, making the fillings virtually unnoticeable while enhancing the overall appearance of your smile."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "In addition to their strength and durability, tooth-coloured fillings are highly aesthetic, helping to preserve the natural look of your teeth without compromising function."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "The procedure for tooth-coloured fillings is usually carried out under local anaesthetic. The affected area is carefully cleared of decay or any loose filling material. The tooth is then cleaned, dried, and prepared before the white filling material is placed and shaped."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A special curing light is applied to harden the filling, after which it is trimmed, adjusted, and polished to ensure a comfortable bite and a smooth, natural finish."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 15,
+      "Title": "Mouth Guards",
+      "Slug": "mouth-guards",
+      "description": "Custom-made sports mouthguards designed to protect your teeth, stabilise the jaw, and enhance performance during high-contact and fast-paced activities.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "We provide sports mouthguards to protect your teeth and improve your overall performance during physical activities."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Sports mouthguards are essential for protecting your teeth during fast-paced and high-contact activities. In addition to preventing dental injuries, they can also improve balance, stability, and overall movement performance."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Custom-Made Designs**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Custom-made mouthguards are designed specifically for your mouth, ensuring your jaw is positioned in its correct resting position for optimum performance. These mouthguards fit snugly over your teeth, offering superior comfort, protection, and stability throughout your game or activity."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Stabilising the Jaw**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Mouthguards help stabilise the head, neck, and jaw while you are in motion. Proper alignment of these areas enhances balance, improves breathing efficiency, and allows you to perform at your peak during sports activities."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Protection**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Wearing a mouthguard during high-contact sports significantly reduces the risk of serious dental injuries. Due to their shock-absorbing properties, mouthguards help prevent tooth loss, chipped or broken teeth, nerve damage, and jaw fractures."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Custom Mouthguards – Seatbelts for Your Teeth**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Just as you would never drive without a seatbelt, you should not participate in activities with a risk of mouth injury without wearing a mouthguard. Custom-fitted mouthguards offer the highest level of comfort and protection for both adults and children."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Our mouthguards are individually designed and made to protect teeth, lips, tongue, and soft tissues. They help reduce the risk of chipped or broken teeth, nerve damage, and tooth loss while remaining comfortable and easy to wear."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Mouthguards usually cover the upper teeth only. However, in cases where braces or other fixed dental appliances are present on the lower jaw, a mouthguard may be made for the lower teeth as well. An effective mouthguard should be comfortable, durable, tear-resistant, easy to clean, and should not restrict breathing or speech."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Mouthguards are typically ready within one week after impressions are taken. Patients can choose between clear or coloured mouthguards, select from a variety of colours, and even have their name written on the mouthguard."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "A mouthguard is strongly recommended for children with braces to protect both their teeth and orthodontic appliances during sports and physical activities."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 16,
+      "Title": "Gum Disease Treatment",
+      "Slug": "gum-disease-treatment",
+      "description": "Periodontal or gum disease is an inflammatory condition affecting the gums and supporting bone structures, caused by plaque and calculus buildup, and can lead to tooth loss if left untreated.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Periodontal disease, also known as gum disease, is the inflammation and infection of the gums and supporting structures of the teeth. Plaque is a sticky film of bacteria that begins forming on teeth within one hour of brushing. When plaque hardens, it becomes calculus (tartar). Over time, calculus buildup at or below the gum line causes inflammation, deep gum pockets, and loss of bone around the teeth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If detected early, periodontal disease can be treated before significant damage occurs to the teeth and supporting bone. However, if left untreated, it may progress and lead to tooth mobility and tooth loss."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Signs of Periodontal Disease**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "• Red, swollen, tender, painful, or bleeding gums\n• Gums that have receded from the teeth\n• Persistent bad breath\n• Gritty feeling between teeth (tartar build-up)\n• Bad taste in the mouth\n• Abscesses between the teeth and gums\n• Dentures no longer fitting properly\n• Loose teeth, teeth drifting apart, or gaps forming between teeth"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**What Is Gingivitis?**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Gingivitis is inflammation and swelling of the gums caused by bacterial plaque and calculus accumulation around the teeth. Bacteria release toxins that irritate the gum tissue, causing redness, swelling, and bleeding during brushing. Gingivitis is a reversible condition and can usually be resolved within a few weeks with effective oral hygiene and professional cleaning if needed."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**What Causes Plaque?**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Plaque is a biofilm composed of bacteria that adheres firmly to the teeth and cannot be rinsed away. Poor oral hygiene allows plaque to accumulate and harden into calculus. Bacteria within plaque and calculus damage the gums and can lead to gingivitis and periodontal disease if not properly removed through brushing, flossing, and professional care."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Periodontitis**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Periodontitis is an advanced form of gum disease involving irreversible loss of the underlying bone that supports the teeth. Gum pockets form between the tooth and gum, acting as reservoirs for bacteria. The rate of bone loss varies between individuals. Periodontitis is often painless, and by the time symptoms are noticed, significant damage may already have occurred."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Advanced Stages of Gum Disease**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "When gum disease progresses untreated, it can lead to periodontitis, causing severe damage to the gums, teeth, and bone. Gums recede, teeth become loose, and in advanced cases, teeth may fall out or require extraction."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Prevention and Treatment**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Periodontal treatment can slow, stop, or control the progression of gum disease. Preventative care includes daily brushing and flossing and regular dental check-ups every six months."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Periodontal treatment may involve:\n• Scaling – removal of bacteria and calculus from below the gum line\n• Root Planing – cleaning and smoothing the tooth roots by removing plaque, tartar, and damaged cementum\n• Possible surgical procedures to correct or control defects\n• Use of medications and/or antimicrobial mouth rinses when required"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Following treatment, maintaining excellent oral hygiene is essential. While professional treatment thoroughly cleans the affected areas, long-term success depends on consistent daily care and regular dental visits."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 17,
+      "Title": "Wisdom Teeth Removal",
+      "Slug": "wisdom-teeth-removal",
+      "description": "Wisdom teeth, or third molars, are often removed when they lack sufficient space to erupt properly, causing pain, infection, or other dental complications.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Wisdom teeth, also known as third molars, are the last teeth to erupt at the back of each side of the upper and lower jaws. When they align correctly and the surrounding gum tissue is healthy, wisdom teeth may not pose any problems."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Unfortunately, wisdom teeth often do not have enough space to erupt into proper position or may grow at an abnormal angle. As a result, they are commonly extracted either before or after eruption, typically during the late teenage years or early twenties."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Impacted wisdom teeth are teeth that remain trapped in the jawbone or gums and cannot erupt normally. Wisdom teeth extraction is a very common procedure and is often recommended early to prevent complications such as pain, swelling, infection, or damage to neighbouring teeth."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Because wisdom teeth are difficult to reach and clean, they can easily trap bacteria, increasing the risk of tooth decay, gum disease, and infection. Routine dental X-rays can help determine whether wisdom teeth need to be removed."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Impaction**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "If a wisdom tooth is partially erupted and stuck beneath the gum, it can make brushing and flossing painful and difficult. Impacted wisdom teeth may lead to:\n• Tooth crowding\n• Increased risk of tooth decay\n• Infection and abscess formation\n• Gum disease"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**Treatment**"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "For impacted wisdom teeth, a small incision is made in the gum tissue to access the tooth. In some cases, a small amount of surrounding bone must be removed. The tooth may then be divided into smaller sections to allow safe and controlled removal."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "After the tooth is removed, stitches are placed to close the gum tissue. These sutures may dissolve naturally or be removed during a follow-up visit, depending on the type used."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "All wisdom teeth extractions are performed as outpatient procedures under appropriate anaesthesia in our clinic. This ensures maximum patient comfort and convenience while maintaining the highest standards of safety using modern equipment and techniques."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "Title": "Emergency Dental Care",
+      "Slug": "emergency-dental-care",
+      "description": "If you have pain, it's an emergency!",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "**If you have pain, it's an emergency!**"
+            },
+            {
+              "text": "Whether you have chipped teeth, knocked your tooth, pain or abscess (pus filled boil), call us now and we will do our best to fit you in today!"
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "Title": "Dental Inlays and Onlays",
+      "Slug": "dental-inlays-onlays",
+      "description": "Dental inlays and onlays are custom-made porcelain restorations used to repair large cavities and strengthen damaged teeth while restoring natural shape and function.",
+      "Content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Dental inlays and onlays are porcelain restorations that are cemented onto the existing tooth. They are an ideal treatment option when a cavity is too large for a regular filling or when a tooth requires additional strength and support."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Both dental inlays and onlays are designed to restore the chewing surface and natural shape of the tooth, improving both function and appearance."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Inlays and onlays are custom fabricated in a dental laboratory, which means the treatment is completed over two dental visits. During the first visit, the tooth is prepared and impressions are taken. The final restoration is cemented in place during the second visit."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Because they are made outside the mouth using high-strength materials, inlays and onlays are generally stronger and more durable than direct restorations such as traditional fillings, providing long-lasting results."
+            }
+          ]
+        }
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z",
+      "publishedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

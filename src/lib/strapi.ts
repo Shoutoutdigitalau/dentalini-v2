@@ -1,0 +1,222 @@
+const STRAPI_URL =
+  process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+
+interface Block {
+  type: string;
+  children?: { text: string }[];
+}
+
+export interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: Block[];
+  author: string;
+  readTime: number;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  thumbnail: {
+    url: string;
+    alternativeText: string;
+  };
+  category: {
+    Name: string;
+    Slug: string;
+  };
+}
+
+export interface Service {
+  id: number;
+  Title: string;
+  Slug: string;
+  description: string;
+  Content: Block[];
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  Image_url: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+export interface BlogCategory {
+  id: number;
+  attributes: {
+    Name: string;
+    Slug: string;
+    Description: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+  };
+}
+
+export interface TeamMember {
+  id: number;
+  name: string;
+  position: string;
+  bio: string;
+  qualifications: string;
+  specialties: string[];
+  order: number;
+  photo: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+export interface Review {
+  id: number;
+  name: string;
+  rating: number;
+  comment: string;
+  treatment: string;
+  date: string;
+  featured: boolean;
+  avatar: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+export interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+  category: string;
+  order: number;
+}
+
+export interface HeroSlide {
+  id: number;
+  title: string;
+  subtitle: string;
+  highlight: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  order: number;
+  active: boolean;
+  image: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+export interface ClinicInfo {
+  id: number;
+  name: string;
+  address: string;
+  phone: string;
+  email: string;
+  hours: any;
+  about: string;
+  mission: string;
+  vision: string;
+  socialMedia: any;
+  logo: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+export async function getBlogPosts(page = 1, pageSize = 9) {
+  const response = await fetch(
+    `${STRAPI_URL}/api/blog-posts?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=publishedAt:desc`,
+    { next: { revalidate: 60 } }
+  );
+  return response.json();
+}
+
+export async function getBlogPost(slug: string) {
+  const response = await fetch(
+    `${STRAPI_URL}/api/blog-posts?filters[slug][$eq]=${slug}&populate=*`,
+    { next: { revalidate: 60 } }
+  );
+  return response.json();
+}
+
+export async function getBlogCategories() {
+  const response = await fetch(`${STRAPI_URL}/api/blog-categories?populate=*`, {
+    next: { revalidate: 300 },
+  });
+  return response.json();
+}
+
+export async function getServices() {
+  const response = await fetch(
+    `${STRAPI_URL}/api/our-services?populate=*&sort=createdAt:asc`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getService(slug: string) {
+  const response = await fetch(
+    `${STRAPI_URL}/api/our-services?filters[Slug][$eq]=${slug}&populate=*`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getBlogPostsByCategory(
+  categorySlug: string,
+  page = 1,
+  pageSize = 9
+) {
+  const response = await fetch(
+    `${STRAPI_URL}/api/blog-posts?filters[blog_category][Slug][$eq]=${categorySlug}&populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=publishedAt:desc`,
+    { next: { revalidate: 60 } }
+  );
+  return response.json();
+}
+
+export function getStrapiImageUrl(url: string) {
+  return url.startsWith("http") ? url : `${STRAPI_URL}${url}`;
+}
+
+export async function getTeamMembers() {
+  const response = await fetch(
+    `${STRAPI_URL}/api/team-members?populate=*&sort=order:asc`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getReviews(featured = false) {
+  const filter = featured ? "&filters[featured][$eq]=true" : "";
+  const response = await fetch(
+    `${STRAPI_URL}/api/reviews?populate=*${filter}&sort=date:desc`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getFAQs(category?: string) {
+  const filter = category ? `&filters[category][$eq]=${category}` : "";
+  const response = await fetch(
+    `${STRAPI_URL}/api/faqs?${filter}&sort=order:asc`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getHeroSlides() {
+  const response = await fetch(
+    `${STRAPI_URL}/api/hero-slides?populate=*&filters[active][$eq]=true&sort=order:asc`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
+
+export async function getClinicInfo() {
+  const response = await fetch(
+    `${STRAPI_URL}/api/clinic-info?populate=*`,
+    { next: { revalidate: 300 } }
+  );
+  return response.json();
+}
