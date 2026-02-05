@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,12 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+      <body className={`antialiased`}>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
