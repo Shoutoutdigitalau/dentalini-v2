@@ -5,7 +5,7 @@ import Image from "next/image";
 const doctor = {
   name: "Dr. Preeti R. Bharadwaj",
   role: "B.D.S, Grad Dip Clin Dent (Oral Implants) (Uni of Syd)",
-  image: "/team/DSC_0064.jpg",
+  image: "/team/DSC_0192.JPG",
   description: `Dr. Preeti Bharadwaj is the owner and principal dentist at Dentalini since 2013. She completed her Bachelor of Dental Surgery in 2004 from Rajiv Gandhi University of Health Sciences, Bengaluru, India. Succeeding 3 years of work in India, she moved to Sydney where she completed Australian Dental Council exams and registered as a dentist. Her passion to improve function along with patient confidence led her to complete Graduate Diploma in Clinical Dentistry (Oral Implants) from University of Sydney.
 
 Preeti is a member of Australian Dental Association (ADA), Australasian Osseointegration Society (AOS), Australasian Academy of Dento-Facial Aesthetics (AADFA) and is strong believer of continuing education completing many professional development courses.
