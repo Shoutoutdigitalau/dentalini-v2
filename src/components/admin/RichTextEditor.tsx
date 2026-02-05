@@ -1,0 +1,383 @@
+'use client';
+
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Link from '@tiptap/extension-link';
+import Image from '@tiptap/extension-image';
+import TextAlign from '@tiptap/extension-text-align';
+import Underline from '@tiptap/extension-underline';
+import { Color } from '@tiptap/extension-color';
+import { TextStyle } from '@tiptap/extension-text-style';
+import { Extension } from '@tiptap/core';
+
+declare module '@tiptap/core' {
+  interface Commands<ReturnType> {
+    fontSize: {
+      setFontSize: (fontSize: string) => ReturnType;
+      unsetFontSize: () => ReturnType;
+    };
+  }
+}
+
+// Custom FontSize extension
+const FontSize = Extension.create({
+  name: 'fontSize',
+  addOptions() {
+    return {
+      types: ['textStyle'],
+    };
+  },
+  addGlobalAttributes() {
+    return [
+      {
+        types: this.options.types,
+        attributes: {
+          fontSize: {
+            default: null,
+            parseHTML: element => element.style.fontSize.replace('px', ''),
+            renderHTML: attributes => {
+              if (!attributes.fontSize) {
+                return {};
+              }
+              return {
+                style: `font-size: ${attributes.fontSize}px`,
+              };
+            },
+          },
+        },
+      },
+    ];
+  },
+  addCommands() {
+    return {
+      setFontSize: (fontSize: string) => ({ chain }: any) => {
+        return chain().setMark('textStyle', { fontSize }).run();
+      },
+      unsetFontSize: () => ({ chain }: any) => {
+        return chain().setMark('textStyle', { fontSize: null }).removeEmptyTextStyle().run();
+      },
+    };
+  },
+});
+import { Bold, Italic, Underline as UnderlineIcon, Strikethrough, Code, List, ListOrdered, 
+  AlignLeft, AlignCenter, AlignRight, AlignJustify, Link2, Image as ImageIcon, Undo, Redo } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+
+interface RichTextEditorProps {
+  content: string;
+  onChange: (html: string) => void;
+}
+
+export default function RichTextEditor({ content, onChange }: RichTextEditorProps) {
+  const [showLinkInput, setShowLinkInput] = useState(false);
+  const [linkUrl, setLinkUrl] = useState('');
+  const [showImageInput, setShowImageInput] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
+
+  const editor = useEditor({
+    extensions: [
+      StarterKit.configure({
+        heading: {
+          levels: [1, 2, 3, 4, 5, 6]
+        }
+      }),
+      Link.configure({
+        openOnClick: false,
+        HTMLAttributes: {
+          target: '_blank'
+        }
+      }),
+      Image,
+      TextAlign.configure({
+        types: ['heading', 'paragraph']
+      }),
+      Underline,
+      TextStyle,
+      Color,
+      FontSize
+    ],
+    content,
+    onUpdate: ({ editor }) => {
+      onChange(editor.getHTML());
+    },
+    editorProps: {
+      attributes: {
+        class: 'prose prose-sm max-w-none focus:outline-none min-h-[300px] p-4'
+      }
+    },
+    immediatelyRender: false,
+    editorStyle: {
+      a: {
+        color: '#0091BA',
+        textDecoration: 'underline'
+      }
+    }
+  });
+
+  if (!editor) return null;
+
+  const addLink = () => {
+    if (linkUrl) {
+      editor.chain().focus().setLink({ href: linkUrl }).run();
+      setLinkUrl('');
+      setShowLinkInput(false);
+    }
+  };
+
+  const addImage = () => {
+    if (imageUrl) {
+      editor.chain().focus().setImage({ src: imageUrl }).run();
+      setImageUrl('');
+      setShowImageInput(false);
+    }
+  };
+
+  return (
+    <div className="border border-slate-300 rounded-md bg-white">
+      <style jsx global>{`
+        .ProseMirror a {
+          color: #0091BA;
+          text-decoration: underline;
+        }
+        .ProseMirror a:hover {
+          color: #007a9e;
+        }
+      `}</style>
+      <div className="border-b border-slate-300 p-2 bg-slate-50 flex flex-wrap gap-1">
+        {/* Headings */}
+        <select
+          onChange={(e) => {
+            const level = parseInt(e.target.value);
+            if (level === 0) {
+              editor.chain().focus().setParagraph().run();
+            } else {
+              editor.chain().focus().toggleHeading({ level: level as any }).run();
+            }
+          }}
+          className="border border-slate-300 rounded px-2 py-1 text-sm"
+        >
+          <option value="0">Paragraph</option>
+          <option value="1">H1</option>
+          <option value="2">H2</option>
+          <option value="3">H3</option>
+          <option value="4">H4</option>
+          <option value="5">H5</option>
+          <option value="6">H6</option>
+        </select>
+
+        {/* Font Size */}
+        <select
+          onChange={(e) => {
+            const size = e.target.value;
+            if (size) {
+              editor.chain().focus().setFontSize(size).run();
+            }
+          }}
+          className="border border-slate-300 rounded px-2 py-1 text-sm"
+        >
+          <option value="">Font Size</option>
+          <option value="12">12px</option>
+          <option value="14">14px</option>
+          <option value="16">16px</option>
+          <option value="18">18px</option>
+          <option value="20">20px</option>
+          <option value="24">24px</option>
+          <option value="28">28px</option>
+          <option value="32">32px</option>
+          <option value="36">36px</option>
+          <option value="48">48px</option>
+        </select>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
+        {/* Text Formatting */}
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('bold') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleBold().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Bold className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('italic') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleItalic().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Italic className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('underline') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleUnderline().run()}
+          className="h-8 w-8 p-0"
+        >
+          <UnderlineIcon className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('strike') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleStrike().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Strikethrough className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('code') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleCode().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Code className="h-4 w-4" />
+        </Button>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
+        {/* Lists */}
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('bulletList') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleBulletList().run()}
+          className="h-8 w-8 p-0"
+        >
+          <List className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('orderedList') ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().toggleOrderedList().run()}
+          className="h-8 w-8 p-0"
+        >
+          <ListOrdered className="h-4 w-4" />
+        </Button>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
+        {/* Alignment */}
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive({ textAlign: 'left' }) ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().setTextAlign('left').run()}
+          className="h-8 w-8 p-0"
+        >
+          <AlignLeft className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive({ textAlign: 'center' }) ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().setTextAlign('center').run()}
+          className="h-8 w-8 p-0"
+        >
+          <AlignCenter className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive({ textAlign: 'right' }) ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().setTextAlign('right').run()}
+          className="h-8 w-8 p-0"
+        >
+          <AlignRight className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive({ textAlign: 'justify' }) ? 'default' : 'ghost'}
+          onClick={() => editor.chain().focus().setTextAlign('justify').run()}
+          className="h-8 w-8 p-0"
+        >
+          <AlignJustify className="h-4 w-4" />
+        </Button>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
+        {/* Link */}
+        <Button
+          type="button"
+          size="sm"
+          variant={editor.isActive('link') ? 'default' : 'ghost'}
+          onClick={() => setShowLinkInput(!showLinkInput)}
+          className="h-8 w-8 p-0"
+        >
+          <Link2 className="h-4 w-4" />
+        </Button>
+
+        {/* Image */}
+        <Button
+          type="button"
+          size="sm"
+          variant="ghost"
+          onClick={() => setShowImageInput(!showImageInput)}
+          className="h-8 w-8 p-0"
+        >
+          <ImageIcon className="h-4 w-4" />
+        </Button>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
+        {/* Undo/Redo */}
+        <Button
+          type="button"
+          size="sm"
+          variant="ghost"
+          onClick={() => editor.chain().focus().undo().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Undo className="h-4 w-4" />
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant="ghost"
+          onClick={() => editor.chain().focus().redo().run()}
+          className="h-8 w-8 p-0"
+        >
+          <Redo className="h-4 w-4" />
+        </Button>
+      </div>
+
+      {/* Link Input */}
+      {showLinkInput && (
+        <div className="p-3 border-b border-slate-300 bg-slate-50 flex gap-2">
+          <input
+            type="url"
+            placeholder="Enter URL"
+            value={linkUrl}
+            onChange={(e) => setLinkUrl(e.target.value)}
+            className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
+          />
+          <Button type="button" size="sm" onClick={addLink}>Add</Button>
+          <Button type="button" size="sm" variant="ghost" onClick={() => setShowLinkInput(false)}>Cancel</Button>
+        </div>
+      )}
+
+      {/* Image Input */}
+      {showImageInput && (
+        <div className="p-3 border-b border-slate-300 bg-slate-50 flex gap-2">
+          <input
+            type="url"
+            placeholder="Enter image URL"
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
+          />
+          <Button type="button" size="sm" onClick={addImage}>Add</Button>
+          <Button type="button" size="sm" variant="ghost" onClick={() => setShowImageInput(false)}>Cancel</Button>
+        </div>
+      )}
+
+      <EditorContent editor={editor} />
+    </div>
+  );
+}
