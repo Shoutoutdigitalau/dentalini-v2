@@ -35,8 +35,8 @@ export default function AdminPage() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-[#0E2F80] text-white">
-        <div className="p-6">
+      <aside className="w-64 bg-[#0E2F80] text-white flex flex-col">
+        <div className="p-6 flex-1">
           <img src="/logo-with-bg.png" alt="Logo" className="h-12 mb-8" />
           
           <nav className="space-y-2">
@@ -55,11 +55,11 @@ export default function AdminPage() {
           </nav>
         </div>
 
-        <div className="absolute bottom-6 left-6 right-6">
+        <div className="p-6">
           <Button 
             onClick={() => signOut({ callbackUrl: "/admin/login" })}
             variant="outline"
-            className="w-full text-white border-white hover:bg-white hover:text-[#0E2F80]"
+            className="w-full text-red-500 border-red-500 hover:bg-red-500 hover:text-white"
           >
             <LogOut className="w-4 h-4 mr-2" />
             Logout
@@ -70,14 +70,14 @@ export default function AdminPage() {
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
         <div className="p-8">
-          <h1 className="text-3xl font-bold text-[#0E2F80] mb-8">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-black mb-8">Dashboard</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {menuItems.slice(1).map((item) => (
               <Link key={item.href} href={item.href}>
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                   <item.icon className="w-12 h-12 text-[#0091BA] mb-4" />
-                  <h3 className="text-xl font-semibold text-[#0E2F80]">{item.label}</h3>
+                  <h3 className="text-xl font-semibold text-black">{item.label}</h3>
                   <p className="text-gray-600 mt-2">Manage {item.label.toLowerCase()}</p>
                 </div>
               </Link>

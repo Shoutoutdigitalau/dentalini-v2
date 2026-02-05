@@ -8,17 +8,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const { data: session, status } = useSession();
   const router = useRouter();
   const pathname = usePathname();
-
-  // Don't protect the login page
-  if (pathname === "/admin/login") {
-    return <>{children}</>;
-  }
+  
+  const isLoginPage = pathname === "/admin/login";
 
   useEffect(() => {
-    if (status === "unauthenticated") {
+    if (!isLoginPage && status === "unauthenticated") {
       router.push("/admin/login");
     }
-  }, [status, router]);
+  }, [status, router, isLoginPage]);
+
+  // Allow login page to render without auth
+  if (isLoginPage) {
+    return <>{children}</>;
+  }
 
   if (status === "loading") {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
