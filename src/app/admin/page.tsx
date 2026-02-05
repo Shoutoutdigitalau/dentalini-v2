@@ -1,24 +1,19 @@
 'use client';
 
-import { signOut } from "next-auth/react";
+import AdminSidebar from "@/components/admin/AdminSidebar";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { 
-  LayoutDashboard, 
   Briefcase, 
   HelpCircle, 
   Image, 
   Users, 
-  Settings, 
-  LogOut,
+  Settings,
   FileImage,
   Award,
   Mail
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const menuItems = [
-  { icon: LayoutDashboard, label: "Dashboard", href: "/admin" },
   { icon: Briefcase, label: "Services", href: "/admin/services" },
   { icon: HelpCircle, label: "FAQs", href: "/admin/faqs" },
   { icon: Image, label: "Gallery", href: "/admin/gallery" },
@@ -30,50 +25,16 @@ const menuItems = [
 ];
 
 export default function AdminPage() {
-  const pathname = usePathname();
-
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
-      <aside className="w-64 bg-[#0E2F80] text-white flex flex-col">
-        <div className="p-6 flex-1">
-          <img src="/logo-with-bg.png" alt="Logo" className="h-12 mb-8" />
-          
-          <nav className="space-y-2">
-            {menuItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <div className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
-                  pathname === item.href 
-                    ? "bg-[#0091BA]" 
-                    : "hover:bg-[#0091BA]/50"
-                }`}>
-                  <item.icon className="w-5 h-5" />
-                  <span>{item.label}</span>
-                </div>
-              </Link>
-            ))}
-          </nav>
-        </div>
+      <AdminSidebar />
 
-        <div className="p-6">
-          <Button 
-            onClick={() => signOut({ callbackUrl: "/admin/login" })}
-            variant="outline"
-            className="w-full text-red-500 border-red-500 hover:bg-red-500 hover:text-white"
-          >
-            <LogOut className="w-4 h-4 mr-2" />
-            Logout
-          </Button>
-        </div>
-      </aside>
-
-      {/* Main Content */}
       <main className="flex-1 overflow-auto">
         <div className="p-8">
           <h1 className="text-3xl font-bold text-black mb-8">Dashboard</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuItems.slice(1).map((item) => (
+            {menuItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                   <item.icon className="w-12 h-12 text-[#0091BA] mb-4" />
