@@ -23,6 +23,7 @@ export default function FAQsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchInput, setSearchInput] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("All");
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -56,11 +57,15 @@ export default function FAQsPage() {
     }
   };
 
-  const filteredFaqs = faqs.filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const categories = ["All", ...new Set(faqs.map(f => f.category))];
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = categoryFilter === "All" || faq.category === categoryFilter;
+    return matchesSearch && matchesCategory;
+  });
   const totalPages = Math.ceil(filteredFaqs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -81,8 +86,8 @@ export default function FAQsPage() {
             </Link>
           </div>
 
-          <div className="mb-6">
-            <div className="relative">
+          <div className="mb-6 flex gap-4">
+            <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <Input
                 placeholder="Search FAQs by question, answer, or category..."
@@ -91,6 +96,15 @@ export default function FAQsPage() {
                 className="pl-10 h-12 bg-white border-slate-300"
               />
             </div>
+            <select
+              value={categoryFilter}
+              onChange={(e) => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
+              className="h-12 px-4 bg-white border border-slate-300 rounded-md text-sm"
+            >
+              {categories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+              ))}
+            </select>
           </div>
 
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
@@ -115,7 +129,7 @@ export default function FAQsPage() {
                   <tbody>
                     {currentFaqs.map((faq) => (
                       <tr key={faq._id} className="border-b border-slate-100 hover:bg-slate-50">
-                        <td className="px-6 py-4 text-sm text-slate-900">{faq.category}</td>
+                        <td className="px-6 py-4 text-sm text-slate-900 whitespace-nowrap">{faq.category}</td>
                         <td className="px-6 py-4 font-medium text-slate-900">{faq.question}</td>
                         <td className="px-6 py-4 text-sm text-slate-600 max-w-md truncate">{faq.answer}</td>
                         <td className="px-6 py-4 text-center text-sm text-slate-600">{faq.order}</td>
