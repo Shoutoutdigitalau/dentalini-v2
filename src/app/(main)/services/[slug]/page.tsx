@@ -6,9 +6,29 @@ import { ArrowRight } from "lucide-react";
 import dbConnect from "@/lib/mongodb";
 import Service from "@/models/Service";
 import "./service-content.css";
+import type { Metadata } from "next";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  
+  await dbConnect();
+  const service = await Service.findOne({ slug }).lean();
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+    };
+  }
+
+  return {
+    title: service.metaTitle || service.title,
+    description: service.metaDescription || service.description,
+    keywords: service.metaKeywords || "",
+  };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
@@ -28,17 +48,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       <article className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto">
-          {/* Service Image */}
-          {service.image && (
-            <figure className="mb-10">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full rounded-xl shadow-md aspect-video object-cover"
-              />
-            </figure>
-          )}
-
           {/* Service Content */}
           <div 
             className="service-content text-gray-800 text-base leading-7"

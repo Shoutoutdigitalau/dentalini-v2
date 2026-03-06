@@ -26,7 +26,9 @@ export default function ServicesPreview() {
     try {
       const res = await fetch('/api/services');
       const data = await res.json();
-      const featuredServices = data.services?.filter((s: Service) => s.featured) || [];
+      const featuredServices = data.services?.filter((s: Service) => s.featured).sort((a: Service, b: Service) => 
+        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      ) || [];
       setServices(featuredServices);
     } catch (error) {
       console.error('Failed to fetch services:', error);
