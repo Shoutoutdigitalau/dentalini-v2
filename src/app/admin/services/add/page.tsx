@@ -32,6 +32,8 @@ export default function AddServicePage() {
     e.preventDefault();
     setLoading(true);
 
+    console.log('Content being saved:', content);
+
     try {
       const res = await fetch("/api/services", {
         method: "POST",

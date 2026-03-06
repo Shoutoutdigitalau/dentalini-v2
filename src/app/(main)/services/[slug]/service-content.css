@@ -14,6 +14,14 @@
   margin: 0.5rem 0;
 }
 
+.service-content .max-w-\[150px\] {
+  max-width: 150px !important;
+}
+
+.service-content .object-contain {
+  object-fit: contain !important;
+}
+
 .service-content ul,
 .service-content ol {
   padding-left: 1.5rem;

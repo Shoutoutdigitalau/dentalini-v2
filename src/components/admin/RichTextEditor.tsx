@@ -88,6 +88,8 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
   const [showTableInput, setShowTableInput] = useState(false);
   const [tableRows, setTableRows] = useState('3');
   const [tableCols, setTableCols] = useState('3');
+  const [showHtmlSource, setShowHtmlSource] = useState(false);
+  const [htmlSource, setHtmlSource] = useState('');
 
   const editor = useEditor({
     extensions: [
@@ -125,7 +127,9 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
     ],
     content,
     onUpdate: ({ editor }) => {
-      onChange(editor.getHTML());
+      if (!showHtmlSource) {
+        onChange(editor.getHTML());
+      }
     },
     editorProps: {
       attributes: {
@@ -143,13 +147,11 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
 
   if (!editor) return null;
 
-  // Expose insertImage method via onInsertImage
-  if (onInsertImage) {
-    (window as any).__editorInsertImage = (url: string) => {
-      setImageUrl(url);
-      setShowImageSettings(true);
-    };
-  }
+  // Expose insertImage method
+  (window as any).__editorInsertImage = (url: string) => {
+    setImageUrl(url);
+    setShowImageSettings(true);
+  };
 
   const addLink = () => {
     if (linkUrl) {
@@ -551,6 +553,29 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
 
         <div className="w-px h-6 bg-slate-300 mx-1"></div>
 
+        {/* HTML Source */}
+        <Button
+          type="button"
+          size="sm"
+          variant={showHtmlSource ? 'default' : 'ghost'}
+          onClick={() => {
+            if (!showHtmlSource) {
+              setHtmlSource(editor.getHTML());
+            } else {
+              // When switching back, update content directly without parsing
+              onChange(htmlSource);
+              editor.commands.setContent(htmlSource, false);
+            }
+            setShowHtmlSource(!showHtmlSource);
+          }}
+          className="h-8 px-2"
+          title="HTML Source"
+        >
+          <Code className="h-4 w-4" />
+        </Button>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
         {/* Undo/Redo */}
         <Button
           type="button"
@@ -683,7 +708,19 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
         </div>
       )}
 
-      <EditorContent editor={editor} />
+      {showHtmlSource ? (
+        <textarea
+          value={htmlSource}
+          onChange={(e) => {
+            setHtmlSource(e.target.value);
+            onChange(e.target.value);
+          }}
+          className="w-full min-h-[300px] p-4 font-mono text-sm border-0 focus:outline-none"
+          placeholder="Edit HTML source code..."
+        />
+      ) : (
+        <EditorContent editor={editor} />
+      )}
     </div>
   );
 }
