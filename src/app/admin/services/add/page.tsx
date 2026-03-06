@@ -19,7 +19,10 @@ export default function AddServicePage() {
     title: "",
     slug: "",
     description: "",
-    image: ""
+    image: "",
+    metaTitle: "",
+    metaDescription: "",
+    metaKeywords: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -51,7 +54,7 @@ export default function AddServicePage() {
     <div className="flex h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
       <AdminSidebar />
       <main className="flex-1 overflow-auto">
-        <div className="max-w-4xl mx-auto px-6 py-10">
+        <div className="max-w-6xl mx-auto px-6 py-10">
           {/* Header */}
           <div className="mb-8">
             <Link href="/admin/services">
@@ -105,10 +108,6 @@ export default function AddServicePage() {
                   className="h-12 text-base font-mono text-sm border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20"
                   required
                 />
-                <p className="text-xs text-slate-500 flex items-center gap-1.5 mt-1.5">
-                  <span className="w-1 h-1 rounded-full bg-slate-400"></span>
-                  This will be used in the URL: /services/{formData.slug || 'your-slug'}
-                </p>
               </div>
 
               {/* Divider */}
@@ -129,7 +128,6 @@ export default function AddServicePage() {
                   className="text-base border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20 resize-none"
                   required
                 />
-                <p className="text-xs text-slate-500">{formData.description.length} characters</p>
               </div>
 
               {/* Full Content */}
@@ -139,6 +137,59 @@ export default function AddServicePage() {
                   <span className="text-red-500 ml-1">*</span>
                 </Label>
                 <RichTextEditor content={content} onChange={setContent} />
+              </div>
+
+              {/* Divider */}
+              <div className="border-t border-slate-200"></div>
+
+              {/* SEO Section */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-slate-900">SEO Information</h3>
+                
+                {/* Meta Title */}
+                <div className="space-y-2">
+                  <Label htmlFor="metaTitle" className="text-sm font-semibold text-slate-700">
+                    Meta Title
+                  </Label>
+                  <Input
+                    id="metaTitle"
+                    value={formData.metaTitle}
+                    onChange={(e) => setFormData({ ...formData, metaTitle: e.target.value })}
+                    placeholder="SEO title for search engines"
+                    className="h-12 text-base border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20"
+                  />
+                </div>
+
+                {/* Meta Description */}
+                <div className="space-y-2">
+                  <Label htmlFor="metaDescription" className="text-sm font-semibold text-slate-700">
+                    Meta Description
+                  </Label>
+                  <Textarea
+                    id="metaDescription"
+                    value={formData.metaDescription}
+                    onChange={(e) => setFormData({ ...formData, metaDescription: e.target.value })}
+                    rows={3}
+                    placeholder="SEO description for search engines (150-160 characters)"
+                    className="text-base border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20 resize-none"
+                    maxLength={160}
+                  />
+                  <p className="text-xs text-slate-500">{formData.metaDescription.length}/160 characters</p>
+                </div>
+
+                {/* Meta Keywords */}
+                <div className="space-y-2">
+                  <Label htmlFor="metaKeywords" className="text-sm font-semibold text-slate-700">
+                    Meta Keywords
+                  </Label>
+                  <Input
+                    id="metaKeywords"
+                    value={formData.metaKeywords}
+                    onChange={(e) => setFormData({ ...formData, metaKeywords: e.target.value })}
+                    placeholder="keyword1, keyword2, keyword3"
+                    className="h-12 text-base border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20"
+                  />
+                </div>
               </div>
 
               {/* Image URL */}
@@ -153,10 +204,6 @@ export default function AddServicePage() {
                   placeholder="/images/service-name.jpg"
                   className="h-12 text-base font-mono text-sm border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20"
                 />
-                <p className="text-xs text-slate-500 flex items-center gap-1.5 mt-1.5">
-                  <span className="w-1 h-1 rounded-full bg-slate-400"></span>
-                  Optional: Add a path to an image in your public folder
-                </p>
               </div>
             </div>
 
