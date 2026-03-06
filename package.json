@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start -p 3001",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:faqs": "node seed-faqs.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

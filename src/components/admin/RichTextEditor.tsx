@@ -67,7 +67,7 @@ import { Bold, Italic, Underline as UnderlineIcon, Strikethrough, Code, List, Li
   AlignLeft, AlignCenter, AlignRight, AlignJustify, Link2, Image as ImageIcon, Undo, Redo, Table as TableIcon, 
   Trash2, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface RichTextEditorProps {
   content: string;
@@ -82,6 +82,7 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
   const [showImageInput, setShowImageInput] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [showImageSettings, setShowImageSettings] = useState(false);
+  const [editingImageSrc, setEditingImageSrc] = useState('');
   const [imageWidth, setImageWidth] = useState('');
   const [imageHeight, setImageHeight] = useState('');
   const [imageAlign, setImageAlign] = useState('left');
@@ -108,7 +109,7 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
         inline: true,
         allowBase64: true,
         HTMLAttributes: {
-          class: 'editor-image',
+          class: 'editor-image editable-image',
         },
       }),
       TextAlign.configure({
@@ -134,6 +135,22 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
     editorProps: {
       attributes: {
         class: 'prose prose-sm max-w-none focus:outline-none min-h-[300px] p-4'
+      },
+      handleClickOn: (view, pos, node, nodePos, event) => {
+        if (node.type.name === 'image') {
+          const target = event.target as HTMLElement;
+          if (target.tagName === 'IMG') {
+            const src = node.attrs.src;
+            const style = target.getAttribute('style') || '';
+            const maxWidthMatch = style.match(/max-width:\s*([^;]+)/);
+            const alignMatch = target.parentElement?.style.textAlign;
+            
+            setEditingImageSrc(src);
+            setImageWidth(maxWidthMatch ? maxWidthMatch[1].trim() : '');
+            setImageAlign(alignMatch || 'left');
+            setShowImageSettings(true);
+          }
+        }
       }
     },
     immediatelyRender: false,
@@ -145,13 +162,17 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
     }
   });
 
-  if (!editor) return null;
-
   // Expose insertImage method
-  (window as any).__editorInsertImage = (url: string) => {
-    setImageUrl(url);
-    setShowImageSettings(true);
-  };
+  useEffect(() => {
+    if (editor) {
+      (window as any).__editorInsertImage = (url: string) => {
+        const htmlToInsert = `<p><img src="${url}" style="width: 100%; height: auto;" /></p>`;
+        editor.chain().focus().insertContent(htmlToInsert).run();
+      };
+    }
+  }, [editor]);
+
+  if (!editor) return null;
 
   const addLink = () => {
     if (linkUrl) {
@@ -162,19 +183,45 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
   };
 
   const addImage = () => {
-    if (imageUrl) {
-      // Insert image with proper attributes
-      const style: string[] = [];
-      if (imageWidth) style.push(`width: ${imageWidth.includes('%') || imageWidth.includes('px') ? imageWidth : imageWidth + 'px'}`);
-      if (imageHeight) style.push(`height: ${imageHeight.includes('%') || imageHeight.includes('px') || imageHeight === 'auto' ? imageHeight : imageHeight + 'px'}`);
+    if (editingImageSrc) {
+      // Update existing image by replacing HTML content
+      const html = editor.getHTML();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const images = doc.querySelectorAll('img');
       
-      let htmlToInsert = `<img src="${imageUrl}"`;
-      if (style.length > 0) {
-        htmlToInsert += ` style="${style.join('; ')}"`;
+      images.forEach((img) => {
+        if (img.src === editingImageSrc || img.getAttribute('src') === editingImageSrc) {
+          const style: string[] = ['width: 100%', 'height: auto'];
+          if (imageWidth) {
+            const width = imageWidth.includes('px') || imageWidth.includes('%') ? imageWidth : imageWidth + 'px';
+            style.push(`max-width: ${width}`);
+          }
+          img.setAttribute('style', style.join('; '));
+          
+          const parent = img.parentElement;
+          if (parent && parent.tagName === 'P') {
+            parent.style.textAlign = imageAlign;
+          }
+        }
+      });
+      
+      editor.commands.setContent(doc.body.innerHTML, false);
+      onChange(doc.body.innerHTML);
+      
+      setEditingImageSrc('');
+      setImageWidth('');
+      setImageAlign('left');
+      setShowImageSettings(false);
+    } else if (imageUrl) {
+      const style: string[] = ['width: 100%', 'height: auto'];
+      if (imageWidth) {
+        const width = imageWidth.includes('px') || imageWidth.includes('%') ? imageWidth : imageWidth + 'px';
+        style.push(`max-width: ${width}`);
       }
-      htmlToInsert += ' />';
       
-      // Wrap in paragraph with alignment
+      let htmlToInsert = `<img src="${imageUrl}" style="${style.join('; ')}" />`;
+      
       if (imageAlign === 'center') {
         htmlToInsert = `<p style="text-align: center">${htmlToInsert}</p>`;
       } else if (imageAlign === 'right') {
@@ -220,6 +267,13 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
           height: auto;
           display: inline-block;
           margin: 0.5rem 0;
+          cursor: pointer;
+          transition: all 0.2s;
+          border: 2px solid transparent;
+        }
+        .ProseMirror img:hover {
+          border-color: #0091BA;
+          box-shadow: 0 0 0 3px rgba(0, 145, 186, 0.1);
         }
         .ProseMirror ul,
         .ProseMirror ol {
@@ -614,43 +668,66 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
 
       {/* Image Settings */}
       {showImageSettings && (
-        <div className="p-3 border-b border-slate-300 bg-slate-50">
-          <div className="space-y-2">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                placeholder="Width (e.g., 300 or 50%)"
-                value={imageWidth}
-                onChange={(e) => setImageWidth(e.target.value)}
-                className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
-              />
-              <input
-                type="text"
-                placeholder="Height (e.g., 200 or auto)"
-                value={imageHeight}
-                onChange={(e) => setImageHeight(e.target.value)}
-                className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
-              />
+        <div className="p-4 border-b border-slate-300 bg-gradient-to-r from-blue-50 to-slate-50">
+          <div className="space-y-3">
+            {editingImageSrc && (
+              <div className="flex items-center gap-3 p-3 bg-white rounded-lg border border-slate-200">
+                <img src={editingImageSrc} alt="" className="w-20 h-20 object-cover rounded" />
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-slate-700">Editing Image</p>
+                  <p className="text-xs text-slate-500">Click Update to apply changes</p>
+                </div>
+              </div>
+            )}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">Max Width</label>
+                <input
+                  type="text"
+                  placeholder="e.g., 600px or 100%"
+                  value={imageWidth}
+                  onChange={(e) => setImageWidth(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1">Position</label>
+                <select
+                  value={imageAlign}
+                  onChange={(e) => setImageAlign(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="left">Left</option>
+                  <option value="center">Center</option>
+                  <option value="right">Right</option>
+                </select>
+              </div>
             </div>
-            <div className="flex gap-2 items-center">
-              <label className="text-sm font-medium">Align:</label>
-              <select
-                value={imageAlign}
-                onChange={(e) => setImageAlign(e.target.value)}
-                className="px-3 py-1 border border-slate-300 rounded text-sm"
+            <div className="flex gap-2 pt-2">
+              <Button 
+                type="button" 
+                size="sm" 
+                onClick={addImage} 
+                className="flex-1 bg-blue-600 hover:bg-blue-700"
               >
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="right">Right</option>
-              </select>
-              <Button type="button" size="sm" onClick={addImage} className="ml-auto">Insert</Button>
-              <Button type="button" size="sm" variant="ghost" onClick={() => {
-                setShowImageSettings(false);
-                setImageUrl('');
-                setImageWidth('');
-                setImageHeight('');
-                setImageAlign('left');
-              }}>Cancel</Button>
+                {editingImageSrc ? '✓ Update Image' : '✓ Insert Image'}
+              </Button>
+              <Button 
+                type="button" 
+                size="sm" 
+                variant="outline" 
+                onClick={() => {
+                  setShowImageSettings(false);
+                  setEditingImageSrc('');
+                  setImageUrl('');
+                  setImageWidth('');
+                  setImageHeight('');
+                  setImageAlign('left');
+                }}
+                className="px-6"
+              >
+                Cancel
+              </Button>
             </div>
           </div>
         </div>
@@ -719,7 +796,14 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
           placeholder="Edit HTML source code..."
         />
       ) : (
-        <EditorContent editor={editor} />
+        <>
+          <EditorContent editor={editor} />
+          {!showImageSettings && (
+            <div className="px-4 pb-2 text-xs text-slate-400 italic">
+              💡 Tip: Click on any image to adjust its size and position
+            </div>
+          )}
+        </>
       )}
     </div>
   );
