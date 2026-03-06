@@ -6,6 +6,10 @@ const ServiceSchema = new mongoose.Schema({
   description: { type: String, required: true },
   content: { type: String, required: true },
   image: { type: String },
+  featured: { type: Boolean, default: false },
+  metaTitle: { type: String },
+  metaDescription: { type: String },
+  metaKeywords: { type: String },
   beforeAfterImages: [{
     before: String,
     after: String
@@ -13,4 +17,9 @@ const ServiceSchema = new mongoose.Schema({
   published: { type: Boolean, default: true }
 }, { timestamps: true });
 
-export default mongoose.models.Service || mongoose.model('Service', ServiceSchema);
+// Delete existing model if it exists to ensure schema updates
+if (mongoose.models.Service) {
+  delete mongoose.models.Service;
+}
+
+export default mongoose.model('Service', ServiceSchema);

@@ -13,6 +13,7 @@ interface Service {
   slug: string;
   description: string;
   image: string;
+  featured: boolean;
   createdAt: string;
 }
 
@@ -62,6 +63,24 @@ export default function ServicesPage() {
       }
     } catch (error) {
       console.error("Failed to delete service:", error);
+    }
+  };
+
+  const handleToggleFeatured = async (id: string, currentFeatured: boolean) => {
+    try {
+      const res = await fetch(`/api/services/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ featured: !currentFeatured })
+      });
+
+      if (res.ok) {
+        setServices(services.map(s => 
+          s._id === id ? { ...s, featured: !currentFeatured } : s
+        ));
+      }
+    } catch (error) {
+      console.error("Failed to update featured status:", error);
     }
   };
 
@@ -120,6 +139,7 @@ export default function ServicesPage() {
                       <th className="text-left px-6 py-4 text-sm font-semibold text-slate-700">Title</th>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-slate-700">Slug</th>
                       <th className="text-left px-6 py-4 text-sm font-semibold text-slate-700">Description</th>
+                      <th className="text-center px-6 py-4 text-sm font-semibold text-slate-700">Featured</th>
                       <th className="text-right px-6 py-4 text-sm font-semibold text-slate-700">Actions</th>
                     </tr>
                   </thead>
@@ -143,6 +163,20 @@ export default function ServicesPage() {
                         <td className="px-6 py-4 text-sm text-slate-600 font-mono">{service.slug}</td>
                         <td className="px-6 py-4 text-sm text-slate-600 max-w-md truncate">
                           {service.description}
+                        </td>
+                        <td className="px-6 py-4 text-center">
+                          <button
+                            onClick={() => handleToggleFeatured(service._id, service.featured || false)}
+                            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                              service.featured ? 'bg-[#0091BA]' : 'bg-slate-300'
+                            }`}
+                          >
+                            <span
+                              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                                service.featured ? 'translate-x-6' : 'translate-x-1'
+                              }`}
+                            />
+                          </button>
                         </td>
                         <td className="px-6 py-4 text-right">
                           <div className="flex gap-2 justify-end">
