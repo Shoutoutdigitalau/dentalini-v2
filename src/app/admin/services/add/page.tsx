@@ -7,14 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import RichTextEditor from "@/components/admin/RichTextEditor";
+import MediaPickerModal from "@/components/admin/MediaPickerModal";
 
 export default function AddServicePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [content, setContent] = useState('');
+  const [showMediaPicker, setShowMediaPicker] = useState(false);
+  const [mediaPickerTarget, setMediaPickerTarget] = useState<'feature' | 'editor'>('feature');
   const [formData, setFormData] = useState({
     title: "",
     slug: "",
@@ -136,7 +139,14 @@ export default function AddServicePage() {
                   Full Content
                   <span className="text-red-500 ml-1">*</span>
                 </Label>
-                <RichTextEditor content={content} onChange={setContent} />
+                <RichTextEditor 
+                  content={content} 
+                  onChange={setContent}
+                  onImageClick={() => {
+                    setMediaPickerTarget('editor');
+                    setShowMediaPicker(true);
+                  }}
+                />
               </div>
 
               {/* Divider */}
@@ -195,15 +205,42 @@ export default function AddServicePage() {
               {/* Image URL */}
               <div className="space-y-2">
                 <Label htmlFor="image" className="text-sm font-semibold text-slate-700">
-                  Featured Image URL
+                  Featured Image
                 </Label>
-                <Input
-                  id="image"
-                  value={formData.image}
-                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  placeholder="/images/service-name.jpg"
-                  className="h-12 text-base font-mono text-sm border-slate-300 focus:border-[#0091BA] focus:ring-[#0091BA]/20"
-                />
+                
+                {formData.image ? (
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden border-2 border-slate-200">
+                    <img
+                      src={formData.image}
+                      alt="Featured"
+                      className="w-full h-full object-cover"
+                    />
+                    <Button
+                      type="button"
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => setFormData({ ...formData, image: '' })}
+                      className="absolute top-2 right-2"
+                    >
+                      Remove
+                    </Button>
+                  </div>
+                ) : (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => {
+                      setMediaPickerTarget('feature');
+                      setShowMediaPicker(true);
+                    }}
+                    className="w-full h-32 border-2 border-dashed border-slate-300 hover:border-[#0091BA] hover:bg-slate-50"
+                  >
+                    <div className="flex flex-col items-center gap-2">
+                      <ImageIcon className="w-8 h-8 text-slate-400" />
+                      <span className="text-sm text-slate-600">Click to select image</span>
+                    </div>
+                  </Button>
+                )}
               </div>
             </div>
 
@@ -226,6 +263,21 @@ export default function AddServicePage() {
           </form>
         </div>
       </main>
+
+      <MediaPickerModal
+        isOpen={showMediaPicker}
+        onClose={() => setShowMediaPicker(false)}
+        onSelect={(url) => {
+          if (mediaPickerTarget === 'feature') {
+            setFormData({ ...formData, image: url });
+          } else if (mediaPickerTarget === 'editor') {
+            // Insert image into editor
+            if ((window as any).__editorInsertImage) {
+              (window as any).__editorInsertImage(url);
+            }
+          }
+        }}
+      />
     </div>
   );
 }

@@ -72,13 +72,19 @@ import { useState } from 'react';
 interface RichTextEditorProps {
   content: string;
   onChange: (html: string) => void;
+  onImageClick?: () => void;
+  onInsertImage?: (url: string) => void;
 }
 
-export default function RichTextEditor({ content, onChange }: RichTextEditorProps) {
+export default function RichTextEditor({ content, onChange, onImageClick, onInsertImage }: RichTextEditorProps) {
   const [showLinkInput, setShowLinkInput] = useState(false);
   const [linkUrl, setLinkUrl] = useState('');
   const [showImageInput, setShowImageInput] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
+  const [showImageSettings, setShowImageSettings] = useState(false);
+  const [imageWidth, setImageWidth] = useState('');
+  const [imageHeight, setImageHeight] = useState('');
+  const [imageAlign, setImageAlign] = useState('left');
   const [showTableInput, setShowTableInput] = useState(false);
   const [tableRows, setTableRows] = useState('3');
   const [tableCols, setTableCols] = useState('3');
@@ -96,7 +102,13 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
           target: '_blank'
         }
       }),
-      Image,
+      Image.configure({
+        inline: true,
+        allowBase64: true,
+        HTMLAttributes: {
+          class: 'editor-image',
+        },
+      }),
       TextAlign.configure({
         types: ['heading', 'paragraph']
       }),
@@ -131,6 +143,14 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
 
   if (!editor) return null;
 
+  // Expose insertImage method via onInsertImage
+  if (onInsertImage) {
+    (window as any).__editorInsertImage = (url: string) => {
+      setImageUrl(url);
+      setShowImageSettings(true);
+    };
+  }
+
   const addLink = () => {
     if (linkUrl) {
       editor.chain().focus().setLink({ href: linkUrl }).run();
@@ -141,9 +161,34 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
 
   const addImage = () => {
     if (imageUrl) {
-      editor.chain().focus().setImage({ src: imageUrl }).run();
+      // Insert image with proper attributes
+      const style: string[] = [];
+      if (imageWidth) style.push(`width: ${imageWidth.includes('%') || imageWidth.includes('px') ? imageWidth : imageWidth + 'px'}`);
+      if (imageHeight) style.push(`height: ${imageHeight.includes('%') || imageHeight.includes('px') || imageHeight === 'auto' ? imageHeight : imageHeight + 'px'}`);
+      
+      let htmlToInsert = `<img src="${imageUrl}"`;
+      if (style.length > 0) {
+        htmlToInsert += ` style="${style.join('; ')}"`;
+      }
+      htmlToInsert += ' />';
+      
+      // Wrap in paragraph with alignment
+      if (imageAlign === 'center') {
+        htmlToInsert = `<p style="text-align: center">${htmlToInsert}</p>`;
+      } else if (imageAlign === 'right') {
+        htmlToInsert = `<p style="text-align: right">${htmlToInsert}</p>`;
+      } else {
+        htmlToInsert = `<p>${htmlToInsert}</p>`;
+      }
+      
+      editor.chain().focus().insertContent(htmlToInsert).run();
+      
       setImageUrl('');
+      setImageWidth('');
+      setImageHeight('');
+      setImageAlign('left');
       setShowImageInput(false);
+      setShowImageSettings(false);
     }
   };
 
@@ -167,6 +212,12 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
         }
         .ProseMirror a:hover {
           color: #007a9e;
+        }
+        .ProseMirror img {
+          max-width: 100%;
+          height: auto;
+          display: inline-block;
+          margin: 0.5rem 0;
         }
         .ProseMirror ul,
         .ProseMirror ol {
@@ -486,7 +537,13 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
           type="button"
           size="sm"
           variant="ghost"
-          onClick={() => setShowImageInput(!showImageInput)}
+          onClick={() => {
+            if (onImageClick) {
+              onImageClick();
+            } else {
+              setShowImageInput(!showImageInput);
+            }
+          }}
           className="h-8 w-8 p-0"
         >
           <ImageIcon className="h-4 w-4" />
@@ -530,6 +587,50 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
         </div>
       )}
 
+      {/* Image Settings */}
+      {showImageSettings && (
+        <div className="p-3 border-b border-slate-300 bg-slate-50">
+          <div className="space-y-2">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Width (e.g., 300 or 50%)"
+                value={imageWidth}
+                onChange={(e) => setImageWidth(e.target.value)}
+                className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Height (e.g., 200 or auto)"
+                value={imageHeight}
+                onChange={(e) => setImageHeight(e.target.value)}
+                className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
+              />
+            </div>
+            <div className="flex gap-2 items-center">
+              <label className="text-sm font-medium">Align:</label>
+              <select
+                value={imageAlign}
+                onChange={(e) => setImageAlign(e.target.value)}
+                className="px-3 py-1 border border-slate-300 rounded text-sm"
+              >
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+              </select>
+              <Button type="button" size="sm" onClick={addImage} className="ml-auto">Insert</Button>
+              <Button type="button" size="sm" variant="ghost" onClick={() => {
+                setShowImageSettings(false);
+                setImageUrl('');
+                setImageWidth('');
+                setImageHeight('');
+                setImageAlign('left');
+              }}>Cancel</Button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Image Input */}
       {showImageInput && (
         <div className="p-3 border-b border-slate-300 bg-slate-50 flex gap-2">
@@ -540,7 +641,12 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
             onChange={(e) => setImageUrl(e.target.value)}
             className="flex-1 px-3 py-1 border border-slate-300 rounded text-sm"
           />
-          <Button type="button" size="sm" onClick={addImage}>Add</Button>
+          <Button type="button" size="sm" onClick={() => {
+            if (imageUrl) {
+              setShowImageInput(false);
+              setShowImageSettings(true);
+            }
+          }}>Next</Button>
           <Button type="button" size="sm" variant="ghost" onClick={() => setShowImageInput(false)}>Cancel</Button>
         </div>
       )}
