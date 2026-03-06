@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import RichTextEditor from "@/components/ui/rich-text-editor";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import RichTextEditor from "@/components/admin/RichTextEditor";
@@ -161,55 +160,8 @@ export default function AddServicePage() {
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Form Actions */}
             <div className="bg-slate-50 px-8 py-6 border-t border-slate-200 flex items-center justify-between">
-=======
-            <div>
-              <Label htmlFor="slug">Slug *</Label>
-              <Input
-                id="slug"
-                value={formData.slug}
-                onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                required
-              />
-              <p className="text-sm text-gray-500 mt-1">URL-friendly version of the title</p>
-            </div>
-
-            <div>
-              <Label htmlFor="description">Short Description *</Label>
-              <Textarea
-                id="description"
-                value={formData.description}
-                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                rows={3}
-                required
-              />
-            </div>
-
-            <div>
-              <Label>Full Content *</Label>
-              <RichTextEditor
-                value={formData.content}
-                onChange={(content) => setFormData({ ...formData, content })}
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="image">Image URL</Label>
-              <Input
-                id="image"
-                value={formData.image}
-                onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="/images/service.jpg"
-              />
-            </div>
-
-            <div className="flex gap-4">
-              <Button type="submit" className="bg-[#0091BA] hover:bg-[#0091BA]/90" disabled={loading}>
-                {loading ? "Creating..." : "Create Service"}
-              </Button>
->>>>>>> 95ef49b (text editor)
               <Link href="/admin/services">
                 <Button type="button" variant="ghost" className="text-slate-600 hover:text-slate-900 hover:bg-slate-200">
                   Cancel
@@ -223,6 +175,7 @@ export default function AddServicePage() {
                 {loading ? "Creating Service..." : "Create Service"}
               </Button>
             </div>
+              
           </form>
         </div>
       </main>

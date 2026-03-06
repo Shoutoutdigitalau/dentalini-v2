@@ -9,6 +9,10 @@ import Underline from '@tiptap/extension-underline';
 import { Color } from '@tiptap/extension-color';
 import { TextStyle } from '@tiptap/extension-text-style';
 import { Extension } from '@tiptap/core';
+import { Table } from '@tiptap/extension-table';
+import { TableRow } from '@tiptap/extension-table-row';
+import { TableCell } from '@tiptap/extension-table-cell';
+import { TableHeader } from '@tiptap/extension-table-header';
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {
@@ -60,7 +64,8 @@ const FontSize = Extension.create({
   },
 });
 import { Bold, Italic, Underline as UnderlineIcon, Strikethrough, Code, List, ListOrdered, 
-  AlignLeft, AlignCenter, AlignRight, AlignJustify, Link2, Image as ImageIcon, Undo, Redo } from 'lucide-react';
+  AlignLeft, AlignCenter, AlignRight, AlignJustify, Link2, Image as ImageIcon, Undo, Redo, Table as TableIcon, 
+  Trash2, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
@@ -74,6 +79,9 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
   const [linkUrl, setLinkUrl] = useState('');
   const [showImageInput, setShowImageInput] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
+  const [showTableInput, setShowTableInput] = useState(false);
+  const [tableRows, setTableRows] = useState('3');
+  const [tableCols, setTableCols] = useState('3');
 
   const editor = useEditor({
     extensions: [
@@ -95,7 +103,13 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
       Underline,
       TextStyle,
       Color,
-      FontSize
+      FontSize,
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
     ],
     content,
     onUpdate: ({ editor }) => {
@@ -133,6 +147,17 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
     }
   };
 
+  const addTable = () => {
+    const rows = parseInt(tableRows);
+    const cols = parseInt(tableCols);
+    if (rows > 0 && cols > 0) {
+      editor.chain().focus().insertTable({ rows, cols, withHeaderRow: true }).run();
+      setTableRows('3');
+      setTableCols('3');
+      setShowTableInput(false);
+    }
+  };
+
   return (
     <div className="border border-slate-300 rounded-md bg-white">
       <style jsx global>{`
@@ -142,6 +167,49 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
         }
         .ProseMirror a:hover {
           color: #007a9e;
+        }
+        .ProseMirror ul,
+        .ProseMirror ol {
+          padding-left: 1.5rem;
+          margin: 0.5rem 0;
+        }
+        .ProseMirror ul {
+          list-style-type: disc;
+        }
+        .ProseMirror ol {
+          list-style-type: decimal;
+        }
+        .ProseMirror li {
+          margin: 0.25rem 0;
+        }
+        .ProseMirror table {
+          border-collapse: collapse;
+          table-layout: fixed;
+          width: 100%;
+          margin: 1rem 0;
+          overflow: hidden;
+        }
+        .ProseMirror td,
+        .ProseMirror th {
+          min-width: 1em;
+          border: 2px solid #cbd5e1;
+          padding: 8px 12px;
+          vertical-align: top;
+          box-sizing: border-box;
+          position: relative;
+        }
+        .ProseMirror th {
+          font-weight: bold;
+          text-align: left;
+          background-color: #f8fafc;
+        }
+        .ProseMirror .selectedCell:after {
+          z-index: 2;
+          position: absolute;
+          content: "";
+          left: 0; right: 0; top: 0; bottom: 0;
+          background: rgba(0, 145, 186, 0.1);
+          pointer-events: none;
         }
       `}</style>
       <div className="border-b border-slate-300 p-2 bg-slate-50 flex flex-wrap gap-1">
@@ -188,6 +256,14 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
           <option value="36">36px</option>
           <option value="48">48px</option>
         </select>
+
+        {/* Text Color */}
+        <input
+          type="color"
+          onChange={(e) => editor.chain().focus().setColor(e.target.value).run()}
+          className="h-8 w-12 border border-slate-300 rounded cursor-pointer"
+          title="Text Color"
+        />
 
         <div className="w-px h-6 bg-slate-300 mx-1"></div>
 
@@ -302,6 +378,98 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
 
         <div className="w-px h-6 bg-slate-300 mx-1"></div>
 
+        {/* Table */}
+        <div className="flex items-center gap-1">
+          <Button
+            type="button"
+            size="sm"
+            variant={editor.isActive('table') ? 'default' : 'ghost'}
+            onClick={() => setShowTableInput(!showTableInput)}
+            className="h-8 w-8 p-0"
+            title="Insert Table"
+          >
+            <TableIcon className="h-4 w-4" />
+          </Button>
+
+          {editor.isActive('table') && (
+            <div className="flex items-center gap-1 ml-1 pl-1 border-l border-slate-300">
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().addRowBefore().run()}
+                className="h-8 px-2 text-xs hover:bg-green-100"
+                title="Add row above"
+              >
+                ↑ Row
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().addRowAfter().run()}
+                className="h-8 px-2 text-xs hover:bg-green-100"
+                title="Add row below"
+              >
+                ↓ Row
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().addColumnBefore().run()}
+                className="h-8 px-2 text-xs hover:bg-green-100"
+                title="Add column left"
+              >
+                ← Col
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().addColumnAfter().run()}
+                className="h-8 px-2 text-xs hover:bg-green-100"
+                title="Add column right"
+              >
+                → Col
+              </Button>
+              <div className="w-px h-6 bg-slate-300 mx-1"></div>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().deleteRow().run()}
+                className="h-8 px-2 text-xs hover:bg-red-100 hover:text-red-600"
+                title="Delete current row"
+              >
+                ✕ Row
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().deleteColumn().run()}
+                className="h-8 px-2 text-xs hover:bg-red-100 hover:text-red-600"
+                title="Delete current column"
+              >
+                ✕ Col
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="ghost"
+                onClick={() => editor.chain().focus().deleteTable().run()}
+                className="h-8 w-8 p-0 hover:bg-red-100 hover:text-red-600"
+                title="Delete entire table"
+              >
+                <Trash2 className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
+        </div>
+
+        <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
         {/* Link */}
         <Button
           type="button"
@@ -374,6 +542,38 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
           />
           <Button type="button" size="sm" onClick={addImage}>Add</Button>
           <Button type="button" size="sm" variant="ghost" onClick={() => setShowImageInput(false)}>Cancel</Button>
+        </div>
+      )}
+
+      {/* Table Input */}
+      {showTableInput && (
+        <div className="p-3 border-b border-slate-300 bg-slate-50">
+          <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
+              <label className="text-sm font-medium">Rows:</label>
+              <input
+                type="number"
+                min="1"
+                max="20"
+                value={tableRows}
+                onChange={(e) => setTableRows(e.target.value)}
+                className="w-16 px-2 py-1 border border-slate-300 rounded text-sm"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <label className="text-sm font-medium">Columns:</label>
+              <input
+                type="number"
+                min="1"
+                max="10"
+                value={tableCols}
+                onChange={(e) => setTableCols(e.target.value)}
+                className="w-16 px-2 py-1 border border-slate-300 rounded text-sm"
+              />
+            </div>
+            <Button type="button" size="sm" onClick={addTable}>Insert Table</Button>
+            <Button type="button" size="sm" variant="ghost" onClick={() => setShowTableInput(false)}>Cancel</Button>
+          </div>
         </div>
       )}
 
