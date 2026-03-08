@@ -34,8 +34,8 @@ export default function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-[#0E2F80] text-white flex flex-col">
-      <div className="p-6 flex-1">
+    <aside className="w-64 bg-[#0E2F80] text-white flex flex-col h-screen sticky top-0">
+      <div className="p-6 flex-1 overflow-auto">
         <img src="/logo-with-bg.png" alt="Logo" className="h-12 mb-8" />
         
         <nav className="space-y-2">
