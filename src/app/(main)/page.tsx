@@ -5,7 +5,11 @@ import ServicesPreview from "@/components/sections/ServicesPreview";
 import AffiliationSlider from "@/components/sections/AffiliationSlider";
 
 async function getAffiliations() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/affiliations`, {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}` 
+    : 'http://localhost:3000';
+  
+  const res = await fetch(`${baseUrl}/api/affiliations`, {
     cache: 'no-store'
   });
   const data = await res.json();
