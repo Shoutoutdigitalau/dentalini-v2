@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import ReviewsPreview from "@/components/sections/ReviewsPreview";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import AffiliationSlider from "@/components/sections/AffiliationSlider";
+import FloatingChatbot from "@/components/FloatingChatbot";
 import dbConnect from "@/lib/mongodb";
 import Affiliation from "@/models/Affiliation";
 
@@ -24,6 +25,7 @@ export default async function Home() {
         <AffiliationSlider affiliations={affiliations} />
         <ReviewsPreview />
       </main>
+      <FloatingChatbot />
     </div>
   );
 }
