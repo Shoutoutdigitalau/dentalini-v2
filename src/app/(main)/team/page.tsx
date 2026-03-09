@@ -1,19 +1,17 @@
 import SubHeader from "@/components/layout/SubHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import dbConnect from "@/lib/mongodb";
+import Team from "@/models/Team";
 
 async function getTeam() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
-    : 'http://localhost:3000';
-  
-  const res = await fetch(`${baseUrl}/api/team`, { cache: 'no-store' });
-  if (!res.ok) return { team: [] };
-  return res.json();
+  await dbConnect();
+  const team = await Team.find({}).sort({ order: 1 }).lean();
+  return JSON.parse(JSON.stringify(team));
 }
 
-export default async function Team() {
-  const { team } = await getTeam();
+export default async function TeamPage() {
+  const team = await getTeam();
   const principal = team.find((m: any) => m.isPrincipal);
   const staff = team.filter((m: any) => !m.isPrincipal);
 

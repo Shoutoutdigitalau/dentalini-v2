@@ -3,17 +3,13 @@ import Hero from "@/components/sections/Hero";
 import ReviewsPreview from "@/components/sections/ReviewsPreview";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import AffiliationSlider from "@/components/sections/AffiliationSlider";
+import dbConnect from "@/lib/mongodb";
+import Affiliation from "@/models/Affiliation";
 
 async function getAffiliations() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
-    : 'http://localhost:3000';
-  
-  const res = await fetch(`${baseUrl}/api/affiliations`, {
-    cache: 'no-store'
-  });
-  const data = await res.json();
-  return data.affiliations || [];
+  await dbConnect();
+  const affiliations = await Affiliation.find({}).sort({ order: 1 }).lean();
+  return JSON.parse(JSON.stringify(affiliations));
 }
 
 export default async function Home() {
