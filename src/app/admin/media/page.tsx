@@ -201,7 +201,7 @@ export default function MediaPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {filteredFiles.map((file) => (
                   <div
-                    key={file.id}
+                    key={file._id}
                     className="group relative aspect-square rounded-lg overflow-hidden border-2 border-slate-200 hover:border-[#0091BA] cursor-pointer transition-all"
                     onClick={() => setSelectedFile(file)}
                   >
@@ -255,7 +255,7 @@ export default function MediaPage() {
               <div className="space-y-2">
                 {filteredFiles.map((file) => (
                   <div
-                    key={file.id}
+                    key={file._id}
                     className="flex items-center gap-4 p-3 rounded-lg border border-slate-200 hover:border-[#0091BA] hover:bg-slate-50 cursor-pointer transition-all"
                     onClick={() => setSelectedFile(file)}
                   >

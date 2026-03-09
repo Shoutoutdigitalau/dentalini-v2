@@ -100,6 +100,7 @@ export default function AddAffiliationPage() {
 
       {showMediaPicker && (
         <MediaPickerModal
+          isOpen={showMediaPicker}
           onSelect={(url) => {
             setFormData({...formData, logo: url});
             setShowMediaPicker(false);

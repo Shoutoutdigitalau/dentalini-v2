@@ -153,13 +153,7 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
         }
       }
     },
-    immediatelyRender: false,
-    editorStyle: {
-      a: {
-        color: '#0091BA',
-        textDecoration: 'underline'
-      }
-    }
+    immediatelyRender: false
   });
 
   // Expose insertImage method
@@ -206,7 +200,7 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
         }
       });
       
-      editor.commands.setContent(doc.body.innerHTML, false);
+      editor.commands.setContent(doc.body.innerHTML);
       onChange(doc.body.innerHTML);
       
       setEditingImageSrc('');
@@ -618,7 +612,7 @@ export default function RichTextEditor({ content, onChange, onImageClick, onInse
             } else {
               // When switching back, update content directly without parsing
               onChange(htmlSource);
-              editor.commands.setContent(htmlSource, false);
+              editor.commands.setContent(htmlSource);
             }
             setShowHtmlSource(!showHtmlSource);
           }}

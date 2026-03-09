@@ -121,6 +121,7 @@ export default function EditAffiliationPage({ params }: { params: Promise<{ id: 
 
       {showMediaPicker && (
         <MediaPickerModal
+          isOpen={showMediaPicker}
           onSelect={(url) => {
             setFormData({...formData, logo: url});
             setShowMediaPicker(false);
