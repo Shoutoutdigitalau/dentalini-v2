@@ -6,7 +6,7 @@ import AdminSidebar from "@/components/admin/AdminSidebar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import RichTextEditor from "@/components/admin/RichTextEditor";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -50,7 +50,7 @@ export default function EditFAQPage({ params }: { params: { id: string } }) {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
       <AdminSidebar />
       <main className="flex-1 overflow-auto">
         <div className="p-8">
@@ -77,7 +77,10 @@ export default function EditFAQPage({ params }: { params: { id: string } }) {
 
               <div>
                 <Label>Answer</Label>
-                <Textarea rows={6} value={formData.answer} onChange={(e) => setFormData({ ...formData, answer: e.target.value })} required />
+                <RichTextEditor 
+                  content={formData.answer} 
+                  onChange={(value) => setFormData({ ...formData, answer: value })} 
+                />
               </div>
 
               <div>
