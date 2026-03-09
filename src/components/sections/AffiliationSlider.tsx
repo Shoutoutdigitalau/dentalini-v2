@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 interface AffiliationSliderProps {
   affiliations: {
-    id: number;
+    _id: string;
     name: string;
     logo: string;
     url?: string;
@@ -56,7 +56,7 @@ const AffiliationSlider = ({
           >
             {duplicatedAffiliations.map((affiliation, index) => (
               <div 
-                key={`${affiliation.id}-${index}`} 
+                key={`${affiliation._id}-${index}`} 
                 className="flex-shrink-0 px-8 flex items-center justify-center"
                 style={{ width: `${100 / affiliations.length}%` }}
               >
