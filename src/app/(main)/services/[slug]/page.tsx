@@ -12,6 +12,8 @@ interface ServicePageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
   

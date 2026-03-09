@@ -24,6 +24,8 @@ interface FAQType {
   category: string;
 }
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 async function getFaqs() {
   await dbConnect();
   const faqs = await FAQ.find({}).sort({ category: 1, order: 1 }).lean();

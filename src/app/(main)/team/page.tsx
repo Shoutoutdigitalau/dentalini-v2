@@ -4,6 +4,8 @@ import Image from "next/image";
 import dbConnect from "@/lib/mongodb";
 import Team from "@/models/Team";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 async function getTeam() {
   await dbConnect();
   const team = await Team.find({}).sort({ order: 1 }).lean();

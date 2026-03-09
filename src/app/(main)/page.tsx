@@ -7,6 +7,8 @@ import FloatingChatbot from "@/components/FloatingChatbot";
 import dbConnect from "@/lib/mongodb";
 import Affiliation from "@/models/Affiliation";
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 async function getAffiliations() {
   await dbConnect();
   const affiliations = await Affiliation.find({}).sort({ order: 1 }).lean();

@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: "dental services, dentist, dental care, cosmetic dentistry, dental implants, teeth whitening, orthodontics",
 };
 
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export default async function Services() {
   await dbConnect();
   const services = await Service.find({}).sort({ createdAt: 1 }).lean();
