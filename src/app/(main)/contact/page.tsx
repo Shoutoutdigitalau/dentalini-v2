@@ -11,18 +11,55 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+
+    try {
+      const res = await fetch("/api/enquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
       });
-      (e.target as HTMLFormElement).reset();
-    }, 800);
+
+      if (res.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -96,28 +133,58 @@ const Contact = () => {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                    <Input placeholder="John" required className="h-12" />
+                    <Input 
+                      placeholder="John" 
+                      required 
+                      className="h-12"
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                    <Input placeholder="Smith" required className="h-12" />
+                    <Input 
+                      placeholder="Smith" 
+                      required 
+                      className="h-12"
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                    />
                   </div>
                 </div>
                 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                    <Input type="email" placeholder="john@example.com" required className="h-12" />
+                    <Input 
+                      type="email" 
+                      placeholder="john@example.com" 
+                      required 
+                      className="h-12"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <Input type="tel" placeholder="(02) 1234 5678" className="h-12" />
+                    <Input 
+                      type="tel" 
+                      placeholder="(02) 1234 5678" 
+                      className="h-12"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <Input placeholder="Appointment Inquiry" className="h-12" />
+                  <Input 
+                    placeholder="Appointment Inquiry" 
+                    className="h-12"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                  />
                 </div>
 
                 <div>
@@ -127,6 +194,8 @@ const Contact = () => {
                     required 
                     rows={6}
                     className="resize-none"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                   />
                 </div>
 
