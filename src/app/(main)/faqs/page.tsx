@@ -80,7 +80,10 @@ export default async function Faqs() {
                   <AccordionItem key={faq._id} value={faq._id}>
                     <AccordionTrigger>{faq.question}</AccordionTrigger>
                     <AccordionContent>
-                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      <div 
+                        className="prose prose-sm max-w-none [&_p]:mb-4 [&_p:last-child]:mb-0" 
+                        dangerouslySetInnerHTML={{ __html: faq.answer }} 
+                      />
                     </AccordionContent>
                   </AccordionItem>
                 ))}
