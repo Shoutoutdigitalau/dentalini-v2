@@ -3,7 +3,7 @@
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import SubHeader from "@/components/layout/SubHeader";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
@@ -11,6 +11,12 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [openingHours, setOpeningHours] = useState<any[]>([]);
+  const [contactDetails, setContactDetails] = useState({
+    phone: "(02) 8920 3000",
+    email: "info@dentalini.com.au",
+    address: "Suite 3, 118 Alfred St South, Milsons Point NSW 2061"
+  });
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,6 +25,25 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+
+  useEffect(() => {
+    fetchSettings();
+  }, []);
+
+  const fetchSettings = async () => {
+    const res = await fetch("/api/settings");
+    const data = await res.json();
+    if (data.settings?.openingHours) {
+      setOpeningHours(data.settings.openingHours);
+    }
+    if (data.settings?.contactInfo) {
+      setContactDetails({
+        phone: data.settings.contactInfo.phone || "(02) 8920 3000",
+        email: data.settings.contactInfo.email || "info@dentalini.com.au",
+        address: data.settings.contactInfo.address || "Suite 3, 118 Alfred St South, Milsons Point NSW 2061"
+      });
+    }
+  };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -62,29 +87,42 @@ const Contact = () => {
     }
   };
 
-  const contactInfo = [
+  // Group opening hours by time
+  const groupedHours = openingHours.reduce((acc: any, hour) => {
+    const existing = acc.find((g: any) => g.hours === hour.hours);
+    if (existing) {
+      existing.days.push(hour.day);
+    } else {
+      acc.push({ hours: hour.hours, days: [hour.day] });
+    }
+    return acc;
+  }, []);
+
+  const contactCards = [
     {
       icon: Phone,
       title: "Phone",
-      details: ["(02) 8920 3000", "Emergency: (02) 8920 3000"],
+      details: [contactDetails.phone, `Emergency: ${contactDetails.phone}`],
       action: "Call Now"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@dentalini.com.au"],
+      details: [contactDetails.email],
       action: "Send Email"
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["Suite 3, 118 Alfred St South", "Milsons Point NSW 2061"],
+      details: contactDetails.address.split(',').map(s => s.trim()),
       action: "Get Directions"
     },
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["8am - 6pm : Monday - Wednesday, Friday", "8.30am - 2pm : Saturday", "Thursday : By appointments only", "Closed : Sunday, Public holiday"],
+      details: groupedHours.length > 0 
+        ? groupedHours.map((g: any) => `${g.hours}: ${g.days.join(', ')}`)
+        : ["Loading..."],
       action: "Book Appointment"
     }
   ];
@@ -99,7 +137,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="container mx-auto py-12 px-4">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
-          {contactInfo.map((info, index) => (
+          {contactCards.map((info, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg border hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl mb-4">
                 <info.icon className="w-6 h-6 text-primary" />

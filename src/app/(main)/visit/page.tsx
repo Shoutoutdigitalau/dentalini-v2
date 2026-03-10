@@ -1,7 +1,29 @@
 import SubHeader from "@/components/layout/SubHeader";
 import { MapPin, Clock, Car, Train, Bus, Phone, Calendar, Shield, Wifi, Coffee } from "lucide-react";
+import dbConnect from "@/lib/mongodb";
+import Settings from "@/models/Settings";
 
-const Visit = () => {
+async function getOpeningHours() {
+  await dbConnect();
+  let settings = await Settings.findOne().lean();
+  
+  if (!settings) {
+    return [
+      { day: "Monday", hours: "8:00 AM – 6:00 PM", isOpen: true },
+      { day: "Tuesday", hours: "8:00 AM – 6:00 PM", isOpen: true },
+      { day: "Wednesday", hours: "8:00 AM – 6:00 PM", isOpen: true },
+      { day: "Thursday", hours: "By Appointments Only", isOpen: true },
+      { day: "Friday", hours: "8:00 AM – 6:00 PM", isOpen: true },
+      { day: "Saturday", hours: "8:30 AM – 2:00 PM", isOpen: true },
+      { day: "Sunday", hours: "Closed", isOpen: false }
+    ];
+  }
+  
+  return settings.openingHours;
+}
+
+const Visit = async () => {
+  const openingHours = await getOpeningHours();
   const locationFeatures = [
     {
       icon: MapPin,
@@ -30,16 +52,6 @@ const Visit = () => {
     { icon: Coffee, label: "Refreshments" },
     { icon: Calendar, label: "Flexible Scheduling" },
     { icon: Phone, label: "Emergency Support" }
-  ];
-
-  const openingHours = [
-    { day: "Monday", hours: "8:00 AM – 6:00 PM", isOpen: true },
-    { day: "Tuesday", hours: "8:00 AM – 6:00 PM", isOpen: true },
-    { day: "Wednesday", hours: "8:00 AM – 6:00 PM", isOpen: true },
-    { day: "Thursday", hours: "Closed", isOpen: false },
-    { day: "Friday", hours: "8:00 AM – 6:00 PM", isOpen: true },
-    { day: "Saturday", hours: "8:30 AM – 2:00 PM", isOpen: true },
-    { day: "Sunday", hours: "Closed", isOpen: false }
   ];
 
   const transportOptions = [
@@ -133,7 +145,7 @@ const Visit = () => {
             <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-secondary mb-3">Need Directions?</h3>
               <p className="text-sm text-gray-700 mb-4">
-                Having trouble finding us? Our team is happy to provide detailed directions or meet you at the station.
+                Having trouble finding us? Our team is happy to provide detailed directions.
               </p>
               <div className="flex gap-3">
                 <button className="flex-1 bg-secondary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-secondary/90 transition-colors">

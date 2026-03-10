@@ -7,11 +7,47 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 const includedLinks = ["/", "/about"];
 
 const SiteFooter = () => {
   const pathname = usePathname();
+  const [openingHours, setOpeningHours] = useState<any[]>([]);
+  const [contactInfo, setContactInfo] = useState({ phone: "(02) 8920 3000", email: "info@dentalini.com.au", address: "Suite 3, 118 Alfred St South, Milsons Point NSW 2061", mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6627.549355931702!2d151.210381!3d-33.843921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae8b528fd945%3A0xada31445f0d88f4f!2sShop%203%2F118%20Alfred%20St%20S%2C%20Milsons%20Point%20NSW%202061!5e0!3m2!1sen!2sau!4v1754930748822!5m2!1sen!2sau" });
+  const [services, setServices] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchOpeningHours = async () => {
+      try {
+        const res = await fetch("/api/settings");
+        const data = await res.json();
+        if (data.settings?.openingHours) {
+          setOpeningHours(data.settings.openingHours);
+        }
+        if (data.settings?.contactInfo) {
+          setContactInfo(data.settings.contactInfo);
+        }
+      } catch (error) {
+        console.error("Failed to fetch opening hours:", error);
+      }
+    };
+    
+    const fetchServices = async () => {
+      try {
+        const res = await fetch("/api/services");
+        const data = await res.json();
+        if (data.services) {
+          setServices(data.services.slice(0, 5));
+        }
+      } catch (error) {
+        console.error("Failed to fetch services:", error);
+      }
+    };
+    
+    fetchOpeningHours();
+    fetchServices();
+  }, []);
 
   return (
     <div>
@@ -19,7 +55,7 @@ const SiteFooter = () => {
         <div className="h-[460px] w-full bg-muted relative hidden md:block">
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6627.549355931702!2d151.210381!3d-33.843921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae8b528fd945%3A0xada31445f0d88f4f!2sShop%203%2F118%20Alfred%20St%20S%2C%20Milsons%20Point%20NSW%202061!5e0!3m2!1sen!2sau!4v1754930748822!5m2!1sen!2sau"
+              src={contactInfo.mapUrl}
               width="100%"
               height="460"
               style={{ border: 0 }}
@@ -122,60 +158,58 @@ const SiteFooter = () => {
               Services
             </h4>
             <ul className="space-y-2 text-sm text-white">
-              <li>
-                <Link className="story-link" href="/services">
-                  General Dentistry
-                </Link>
-              </li>
-              <li>
-                <Link className="story-link" href="/services">
-                  Cosmetic Dentistry
-                </Link>
-              </li>
-              <li>
-                <Link className="story-link" href="/services">
-                  Orthodontics
-                </Link>
-              </li>
-              <li>
-                <Link className="story-link" href="/services">
-                  Teeth Whitening
-                </Link>
-              </li>
-              <li>
-                <Link className="story-link" href="/services">
-                  Dental Implants
-                </Link>
-              </li>
+              {services.length > 0 ? (
+                services.map((service: any) => (
+                  <li key={service._id}>
+                    <Link className="story-link" href={`/services/${service.slug}`}>
+                      {service.title}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li><Link className="story-link" href="/services">General Dentistry</Link></li>
+                  <li><Link className="story-link" href="/services">Cosmetic Dentistry</Link></li>
+                  <li><Link className="story-link" href="/services">Orthodontics</Link></li>
+                  <li><Link className="story-link" href="/services">Teeth Whitening</Link></li>
+                  <li><Link className="story-link" href="/services">Dental Implants</Link></li>
+                </>
+              )}
             </ul>
-          </div>
 
+          </div>
           <div>
             <h4 className="mb-3 font-medium text-white/60 text-sm uppercase tracking-widest">
               Opening Hours
             </h4>
             <ul className="space-y-2 text-sm text-white">
-              <li>8am - 6pm : Monday - Wednesday, Friday</li>
-              <li>8.30am - 2pm : Saturday</li>
-              <li>Thursday : By appointments only</li>              <li>Closed : Sunday, Public holiday</li>
+              {openingHours.length > 0 ? (
+                openingHours.map((h) => (
+                  <li key={h.day}>{h.day}: {h.hours}</li>
+                ))
+              ) : (
+                <>
+                  <li>8am - 6pm : Monday - Wednesday, Friday</li>
+                  <li>8.30am - 2pm : Saturday</li>
+                  <li>Thursday : By appointments only</li>
+                  <li>Closed : Sunday, Public holiday</li>
+                </>
+              )}
             </ul>
           </div>
-
           <div>
             <h4 className="mb-3 font-medium text-white/60 text-sm uppercase tracking-widest">
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-white">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" /> (02) 8920 3000
+                <Phone className="h-4 w-4" /> {contactInfo.phone}
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4" /> info@dentalini.com.au
+                <Mail className="h-4 w-4" /> {contactInfo.email}
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" /> Suite 3, 118 Alfred St South,{" "}
-                <br />
-                Milsons Point NSW 2061
+                <MapPin className="h-4 w-4" /> {contactInfo.address}
               </li>
             </ul>
           </div>
