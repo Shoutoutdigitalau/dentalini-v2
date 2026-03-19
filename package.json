@@ -10,7 +10,9 @@
     "seed:faqs": "node seed-faqs.js",
     "seed:team": "node seed-team.js",
     "seed:gallery": "node seed-gallery.js",
-    "seed:affiliations": "node seed-affiliations.js"
+    "seed:affiliations": "node seed-affiliations.js",
+    "seed:banners": "node seed-banners.js",
+    "seed:about": "node seed-about.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

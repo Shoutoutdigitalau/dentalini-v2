@@ -6,23 +6,29 @@ import AffiliationSlider from "@/components/sections/AffiliationSlider";
 import FloatingChatbot from "@/components/FloatingChatbot";
 import dbConnect from "@/lib/mongodb";
 import Affiliation from "@/models/Affiliation";
+import Banner from "@/models/Banner";
+import AboutSection from "@/models/AboutSection";
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const revalidate = 60;
 
-async function getAffiliations() {
+async function getData() {
   await dbConnect();
-  const affiliations = await Affiliation.find({}).sort({ order: 1 }).lean();
-  return JSON.parse(JSON.stringify(affiliations));
+  const [affiliations, banners, about] = await Promise.all([
+    Affiliation.find({}).sort({ order: 1 }).lean(),
+    Banner.find({ published: true }).sort({ order: 1 }).lean(),
+    AboutSection.findOne().lean()
+  ]);
+  return JSON.parse(JSON.stringify({ affiliations, banners, about }));
 }
 
 export default async function Home() {
-  const affiliations = await getAffiliations();
+  const { affiliations, banners, about } = await getData();
 
   return (
     <div>
-      <Hero />
+      <Hero banners={banners} />
       <main>
-        <AboutPreview />
+        <AboutPreview about={about} />
         <ServicesPreview />
         <AffiliationSlider affiliations={affiliations} />
         <ReviewsPreview />

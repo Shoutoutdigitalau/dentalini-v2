@@ -14,12 +14,16 @@ import {
   LogOut,
   FileImage,
   Award,
-  Mail
+  Mail,
+  SlidersHorizontal,
+  Info
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/admin" },
+  { icon: SlidersHorizontal, label: "Hero Banners", href: "/admin/banners" },
+  { icon: Info, label: "Who We Are", href: "/admin/about" },
   { icon: Briefcase, label: "Services", href: "/admin/services" },
   { icon: HelpCircle, label: "FAQs", href: "/admin/faqs" },
   { icon: Image, label: "Gallery", href: "/admin/gallery" },
