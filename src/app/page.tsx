@@ -60,12 +60,6 @@ const affiliations = [
     name: "Health Engine",
     logo: "/affiliations/healthengine.png",
     url: "https://www.healthengine.com.au"
-  },
-  {
-    id: 11,
-    name: "SuperCare",
-    logo: "/affiliations/SuperCare-Superannuation-Access-logo.png",
-    url: "https://www.mysupercare.com.au"
   }
 ];
 
